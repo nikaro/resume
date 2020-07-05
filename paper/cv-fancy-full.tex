@@ -1,0 +1,212 @@
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{002080}
+\definecolor{PastelRed}{HTML}{6699FF}
+\definecolor{GoldenEarth}{HTML}{e6ecff}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Nicolas Karolak}
+\tagline{Ingénieur Systèmes Linux}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{content/images/photo}
+
+\personalinfo{%
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  \NewInfoField{sourcehut}{\faGitSquare}[https://git.sr.ht/]
+
+  % Not all of these are required!
+  \email{nicolas@karolak.fr}
+  \phone{06 51 42 21 38}
+  \location{62 rue Paul Gauguin, Moissy-Cramayel}
+  \newline{}
+  \homepage{blog.karolak.fr}
+  \printinfo{\faAddressCard}{cv.karolak.fr}[https://cv.karolak.fr/]
+  \linkedin{nicolas-karolak}
+  \sourcehut{~nka}
+  \github{nikaro}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Experiences}
+
+\cvevent{Administrateur Systèmes et Réseaux}{Université Gustave Eiffel}{Mai 2020 -- Aujourd'hui}{Champs-sur-Marne}
+
+\divider
+
+\cvevent{Ingénieur Systèmes Linux}{UbiCast}{Sep. 2017 -- Avril 2020}{Ivry-sur-Seine}
+\begin{itemize}
+    \item Déploiement d'infrastructure avec Terraform, Packer et Ansible.
+    \item Portage des scripts de déploiement (Python/Bash) vers Ansible.
+    \item Mise en haute-disponibilité du produit (PgSQL, HAProxy, etc.).
+\end{itemize}
+
+\divider
+
+\cvevent{Responsable informatique}{Lycée Technique Privé Saint-Nicolas}{Sep. 2016 -- Août 2017}{Paris}
+\begin{itemize}
+    \item Développement d'un gestionnaire de mots de passe (Django).
+    \item Migration serveur de messagerie interne (Postfix, Dovecot).
+    \item Mise en place Nextcloud pour les professeurs et étudiants.
+\end{itemize}
+
+\divider
+
+\cvevent{Administrateur Systèmes et Réseaux}{IUT de Sénart}{Sep. 2015 -- Sep. 2016}{Lieusaint}
+\begin{itemize}
+    \item Administration système (Debian/Ubuntu).
+    \item Développement (PHP/Bash/Python).
+    \item Exploitation de pars (Ubuntu/Windows).
+\end{itemize}
+
+\divider
+
+\cvevent{Développeur Web}{Indépendant}{Déc. 2014 -- Sep. 2015}{Lieusaint}
+\begin{itemize}
+    \item Développement de sites internet en PHP et Python/Django.
+\end{itemize}
+
+\divider
+
+\cvevent{Administrateur Systèmes et Réseaux}{Lycée Technique Privé Saint-Nicolas}{Août 2011 -- Déc. 2014}{Paris}
+\begin{itemize}
+    \item Administration serveurs GNU/Linux et Windows.
+    \item Virtualisation, VPN, Active Directory, etc.
+\end{itemize}
+
+\newpage
+
+\cvsection{Projects}
+
+\cvevent{Contributions Open Source}{https://github.com/nikaro}{}{}
+Plusieurs soumissions dans quelques projets Open Source, tels que Ansible, Pyinfra, Rss2email, Rss-Bridge, et de nombreux rapports de bogues.
+
+\divider
+
+\cvevent{Devc}{https://git.sr.ht/\textasciitilde nka/devc}{}{}
+Outil de gestion de devcontainer en ligne de commande, écrit en Go. Un devcontainer, concept issus de VSCode, permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.
+
+\divider
+
+\cvevent{Infra}{https://git.sr.ht/\textasciitilde nka/infra}{}{}
+Dépôt contenant les scripts de déploiement et d'orchestration de mon infrastructure personnelle (serveur de messagerie, web, Nextcloud, etc.), en Ansible et Terraform.
+
+\medskip
+
+\switchcolumn
+
+\cvsection{Profil}
+
+Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.
+
+\cvsection{Compétences}
+
+\cvtag{Debian}
+\cvtag{CentOS}
+\cvtag{Ansible}
+\cvtag{Terraform}
+\cvtag{Packer}
+\cvtag{Nginx}
+\cvtag{HAProxy}
+\cvtag{Apache2}
+\cvtag{LXC}
+\cvtag{KVM}
+\cvtag{Docker}
+\cvtag{AWS}
+\cvtag{GCP}
+\cvtag{Scaleway}
+\cvtag{Bash}
+\cvtag{Python}
+\cvtag{Go}
+\cvtag{Pare-feu}
+\cvtag{Routage}
+\cvtag{VLAN}
+
+\medskip
+
+\cvsection{Formations}
+
+\cvevent{Licence Pro Administration Systèmes et Réseaux}{IUT de Sénart, Lieusaint}{Oct. 2011 -- Juin 2012}{}
+
+\divider
+
+\cvevent{BTS Informatique de Gestion}{Institut Medicis Alternance, Paris}{Sept. 2009 -- Mai 2011}{}
+
+\divider
+
+\cvevent{B.Sc.\ in Your Discipline}{Lycée Jacques Prévert, Combs-la-Ville}{Sep. 2007 -- Juin 2009}{}
+
+\cvsection{Langues}
+
+\cvskill{Anglais}{3}
+
+\cvsection{Intérêts}
+
+\cvtag{Informatique}
+\cvtag{Judo}
+\cvtag{Lecture}
+\cvtag{Cinéma}
+\cvtag{Cuisine}
+\cvtag{Restaurant}
+\cvtag{Moto}
+
+\end{paracol}
+
+\end{document}

@@ -47,6 +47,7 @@ html:
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
+	rm cv.*
 
 regenerate:
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -82,5 +83,8 @@ ssh_upload: publish
 rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
+pdf:
+	latex -output-format=pdf -output-dir=pdf/ ${T} > /dev/null
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload
+
+.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload pdf

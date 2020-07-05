@@ -23,7 +23,7 @@ CSS_FILE = 'main-6.css'
 # Profile information
 NAME = 'Nicolas Karolak'
 TAGLINE = 'Ingénieur Systèmes Linux'
-PIC = '../../images/profile.jpg'
+PIC = '../../images/photo.jpg'
 
 # sidebar links
 EMAIL = 'nicolas@karolak.fr'
