@@ -142,7 +142,7 @@ EXPERIENCES = [
         'time': 'Sep. 2016 - Août 2017',
         'company': 'Lycée Technique Privé Saint-Nicolas, Paris',
         'details': [
-            "Développement d'un gestionnaire de compte utilisateur (Django)",
+            "Développement d'un gestionnaire de comptes utilisateurs (Django)",
             "Migration serveur de messagerie interne (Postfix, Dovecot)",
             "Mise en place Nextcloud pour les professeurs et étudiants",
             ],

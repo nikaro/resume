@@ -1,9 +1,10 @@
 \documentclass[10pt,a4paper,roman]{moderncv}
 \moderncvtheme[blue]{classic}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.80]{geometry} % La taille pris par le contenu, ici on a 15% de marges.
-\nopagenumbers{} % Permet de masquer les numéros de page
- 
+\usepackage[top=0.8cm, bottom=0.8cm, left=1.8cm, right=1.8cm]{geometry}
+\setlength{\hintscolumnwidth}{2.3cm}  % largeur de la colonne pour les dates
+\nopagenumbers{}  % Permet de masquer les numéros de page
+
 \title{Ingénieur Systèmes Linux}
 \name{Nicolas}{Karolak}
 \address{62 rue Paul Gauguin}{77550 Moissy-Cramayel}
@@ -14,15 +15,18 @@
 \social[github]{nikaro}
 % \extrainfo{\\}
 % \extrainfo{31 ans\\Permis B}
- 
+
 \begin{document}
 \maketitle
- 
+
+\vspace*{-2.5\baselineskip}  % marge négative pour réduire l'espace
+
 \section{Expériences}
+
 \cventry{Mai 2020\\à Aujourd'hui}{Administrateur Systèmes et Réseaux}{Univ. Gustave Eiffel}{Champs-sur-Marne}{France}{
     \begin{itemize}
-        \item Déploiement de services (WireGuard, pfSense, etc.).
-        \item Écriture d'un démon de logging pour WireGuard.
+        \item Déploiement de services (WireGuard, pfSense, etc.)
+        \item Écriture d'un démon de logging pour WireGuard
     \end{itemize}
 }
 \cventry{Oct. 2012\\à Aujourd'hui}{Enseignant vacataire en Licence Pro}{}{}{}{
@@ -34,58 +38,68 @@
 }
 \cventry{Sep. 2017\\à Avril 2020}{Ingénieur Systèmes Linux}{UbiCast}{Ivry-sur-Seine}{France}{
     \begin{itemize}
-        \item Déploiement d'infrastructure avec Terraform, Packer et Ansible.
-        \item Portage des scripts de déploiement (Python/Bash) vers Ansible.
-        \item Mise en haute-disponibilité du produit (PgSQL, HAProxy, etc.).
+        \item Déploiement d'infrastructure avec Terraform, Packer et Ansible
+        \item Portage des scripts de déploiement (Python/Bash) vers Ansible
+        \item Mise en haute-disponibilité du produit (PgSQL, HAProxy, etc.)
     \end{itemize}
 }
 \cventry{Sep. 2016\\à Août 2017}{Responsable informatique}{Lycée Technique Privé Saint-Nicolas}{Paris}{France}{
     \begin{itemize}
-        \item Développement d'un gestionnaire de mots de passe (Django).
-        \item Migration serveur de messagerie interne (Postfix, Dovecot).
-        \item Mise en place Nextcloud pour les professeurs et étudiants.
+        \item Développement d'un gestionnaire de compte utilisateurs (Django)
+        \item Migration serveur de messagerie interne (Postfix, Dovecot)
+        \item Mise en place Nextcloud pour les professeurs et étudiants
     \end{itemize}
 }
 \cventry{Sep. 2015\\à Sep. 2016}{Administrateur Systèmes et Réseaux}{IUT de Sénart}{Lieusaint}{France}{
     \begin{itemize}
-        \item Administration système (Debian/Ubuntu).
-        \item Développement (PHP/Bash/Python).
-        \item Exploitation de pars (Ubuntu/Windows).
-    \end{itemize}
-}
-\cventry{Déc. 2014\\à Sep. 2015}{Développeur Web}{Indépendant}{}{France}{
-    \begin{itemize}
-        \item Développement de sites internet en PHP et Python/Django.
+        \item Administration système (Debian/Ubuntu)
+        \item Développement (PHP/Bash/Python)
+        \item Exploitation de parc (Ubuntu/Windows)
     \end{itemize}
 }
 \cventry{Août 2011\\à Déc. 2014}{Administrateur Systèmes et Réseaux}{Lycée Technique Privé Saint-Nicolas}{Paris}{France}{
     \begin{itemize}
-        \item Administration serveurs GNU/Linux et Windows.
-        \item Virtualisation, VPN, Active Directory, etc.
+        \item Administration serveurs GNU/Linux et Windows
+        \item Conception infrastructure: virtualisation, VPN, AD, etc.
     \end{itemize}
 }
- 
+
 \section{Formations}
- 
+
 \cventry{2011 -- 2012}{Licence Pro Administration Systèmes et Réseaux}{IUT de Sénart}{Lieusaint}{France}{}{}
 \cventry{2009 -- 2011}{BTS Informatique de Gestion}{Institut Medicis Alternance}{Paris}{France}{}{}
 \cventry{2007 -- 2009}{Bac Pro Micro-informatique et Réseaux}{Lycée Jacques Prévert}{Combs-la-Ville}{France}{}{}
- 
+
 \section{Compétences}
 
 \subsection{Informatique}
 
-\cvline{Langages}{Bash, Python, Go, HTML/CSS, PHP}
-\cvline{OS}{Debian, CentOS, ArchLinux}
-\cvline{Outils}{Git}
+\cvcomputer{\textbf{Linux}}{Debian, CentOS, ArchLinux}
+    {\textbf{Scripting}}{Bash, Python, PHP, Go}
+\cvcomputer{\textbf{IaC}}{Ansible, Pyinfra, Terraform, Packer, Git}
+    {\textbf{Cloud}}{AWS, GCP, Scaleway, OpenStack}
+\cvcomputer{\textbf{Web}}{Nginx, HAProxy, Apache2}
+    {\textbf{Virtualisation}}{LXC/LXD, KVM, Docker}
+\cvcomputer{\textbf{Réseaux}}{Pare-feu, Routage, VLAN}
+    {}{}
 
 \subsection{Langues}
 
-\cvline{Anglais}{Professionnel}
- 
+\cvcomputer{\textbf{Anglais}}{Professionnel}
+    {\textbf{Français}}{Courant}
+
+\section{Projets}
+
+\cventry{}{Contributions Open Source}{https://github.com/nikaro}{}{}
+    {Plusieurs soumissions dans quelques projets Open Source, tels que Ansible, Pyinfra, Rss2email, Rss-Bridge, et de nombreux rapports de bogues.}
+\cventry{}{Devc}{https://git.sr.ht/\textasciitilde nka/devc}{}{}
+    {Outil de gestion de devcontainer en ligne de commande, écrit en Go. Un devcontainer permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.}
+\cventry{}{Infra}{https://git.sr.ht/\textasciitilde nka/infra}{}{}
+    {Dépôt contenant les scripts de déploiement et d'orchestration de mon infrastructure personnelle (serveur de messagerie, web, Nextcloud, etc.), en Ansible et Terraform.}
+
 \section{Centres d'intérêt}
- 
-\cvline{Loisirs}{Guitare en autodidacte depuis 4 ans.}
-\cvline{}{Pratique du Viet Vo Dao, durant 7 ans.}
- 
+
+\cvline{Loisirs}{Informatique, Judo, Lecture, Cuisine}
+\cvline{Sorties}{Cinéma, Restaurant, Randonnée, Cueillette de champignons, Moto}
+
 \end{document}
