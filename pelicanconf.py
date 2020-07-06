@@ -34,6 +34,8 @@ GITHUB = 'nikaro'
 SOURCEHUT = 'nka'
 TWITTER = None
 
+DOWNLOAD_PDF = 'images/cv-nicolas-karolak.pdf'
+
 CAREER_SUMMARY = "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale."
 
 SKILLS = [
