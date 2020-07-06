@@ -11,7 +11,11 @@
                 <div class="company">{{ experience['company'] }}</div>
             </div><!--//meta-->
             <div class="details">
-                <p>{{ experience['details'] }}</p>
+                <ul>
+                {% for detail in experience['details'] %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+                </ul>
             </div><!--//details-->
         </div><!--//item-->
     {% endfor %}
