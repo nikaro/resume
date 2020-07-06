@@ -3,6 +3,7 @@ FROM nikaro/archlinux-dev
 RUN \
     # install required tools
     sudo pacman -Syu --noconfirm \
+        rsync \
         texlive-bibtexextra \
         texlive-bin \
         texlive-core \

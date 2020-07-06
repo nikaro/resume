@@ -3,6 +3,7 @@ PELICAN?=pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
+THEMEDIR=$(BASEDIR)/themes/resume
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
@@ -41,6 +42,9 @@ help:
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
+
+theme:
+	$(PELICAN)-themes -U $(THEMEDIR)
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
@@ -84,7 +88,7 @@ rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 pdf:
-	latex -output-format=pdf -output-dir=pdf/ ${T} > /dev/null
+	cd $(shell dirname $T) ; latex -output-format=pdf -output-dir=../pdf $(shell basename $T) > /dev/null
 
 
 .PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload rsync_upload pdf
