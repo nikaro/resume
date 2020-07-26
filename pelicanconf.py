@@ -44,7 +44,7 @@ SKILLS = [
         'level': '80',
         },
     {
-        'title': 'IaC : Ansible, Terraform, Git, Gitlab CI',
+        'title': 'IaC : Ansible, Git, Gitlab CI, Terraform',
         'level': '90',
         },
     {
