@@ -40,11 +40,11 @@ CAREER_SUMMARY = "Passionné d'informatique. Orienté Linux et automatisation. A
 
 SKILLS = [
     {
-        'title': 'Linux : Debian, CentOS',
+        'title': 'Linux : Debian, CentOS, ArchLinux',
         'level': '80',
         },
     {
-        'title': 'IaC : Ansible, Pyinfra, Terraform, Packer, Git',
+        'title': 'IaC : Ansible, Terraform, Git, Gitlab CI',
         'level': '90',
         },
     {
