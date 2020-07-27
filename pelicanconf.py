@@ -56,7 +56,7 @@ SKILLS = [
         'level': '70',
         },
     {
-        'title': 'Cloud : AWS, GCP, Scaleway, OpenStack',
+        'title': 'Cloud : AWS, Scaleway, OVH',
         'level': '50',
         },
     {
