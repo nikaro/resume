@@ -3,7 +3,7 @@ secrets:
   - 8a197a79-b688-47cf-8f5c-2ffe1bc2495e
 tasks:
   - mirror: |
-      cd blog
+      cd cv
       ssh-keyscan github.com >> ~/.ssh/known_hosts
-      git remote add github git@github.com:nikaro/blog.git
+      git remote add github git@github.com:nikaro/cv.git
       git push github master
