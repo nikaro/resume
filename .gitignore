@@ -1,5 +1,7 @@
-output/
-pdf/
+# local cache and settings
+.netlify/
+.vim/
 
-# Local Netlify folder
-.netlify
+# outputs
+public/
+site.tar.gz

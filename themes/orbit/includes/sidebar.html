@@ -1,0 +1,38 @@
+<div class="sidebar-wrapper">
+    <div class="profile-container">
+        {% if 'image' in basics %}
+        <img class="profile-img" src="data:image/jpeg;base64,{{ basics.image | safe }}" alt="profile picture" />
+        {% endif %}
+        <h1 class="name">{{ basics.name }}</h1>
+        <h3 class="tagline">{{ basics.label }}</h3>
+    </div><!--//profile-container-->
+
+    <div class="contact-container container-block">
+        <ul class="list-unstyled contact-list">
+
+            {% if 'email' in basics %}
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto:{{ basics.email }}">{{ basics.email }}</a></li>
+            {% endif %}
+
+            {% if 'phone' in basics %}
+            <li class="phone"><i class="fa fa-phone"></i><a href="tel:{{ basics.phone }}">{{ basics.phone }}</a></li>
+            {% endif %}
+
+            {% if 'url' in basics %}
+            <li class="website"><i class="fa fa-globe"></i><a href="https://{{ basics.url }}">{{ basics.url }}</a></li>
+            {% endif %}
+
+            {% if 'profiles' in basics %}
+            {% for profile in basics.profiles %}
+            <li class="{{ profile.network | replace(' ', '-') | lower }}"><i class="{{ profile.icon | d('fa fa-' + profile.network | replace(' ', '-') | lower) }}"></i><a href="{{ profile.url }}">{{ profile.username }}</a></li>
+            {% endfor %}
+            {% endif %}
+
+        </ul>
+    </div><!--//contact-container-->
+   {% include 'includes/education.html' %}
+   {% include 'includes/language.html' %}
+   {% include 'includes/interests.html' %}
+   {% include 'includes/download.html' %}
+
+</div><!--//sidebar-wrapper-->

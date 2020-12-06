@@ -1,40 +1,37 @@
 .PHONY: all
-all:
+all: help
 
 .PHONY: setup
 ## setup: Install required tools
 setup:
 	@echo "Installing..."
-	@command -v netlify || npm install --global netlify-cli
-	@command -v pelican || pip install --requirement requirements.txt
+	@command -v resumepy || pip install resume-pycli
 
 .PHONY: build
-## build: Generate using production settings
+## build: Generate outputs
 build:
 	@echo "Rendering..."
-	@pelican ./content -o ./output -s ./publishconf.py -t ./themes/resume
-
-.PHONY: pdf
-## pdf: Build PDF
-pdf:
-	@cd $(shell dirname $T) ; latex -output-format=pdf -output-dir=../pdf $(shell basename $T) > /dev/null
+	@resume validate --schema schema.json
+	@resume export
+	@tar -C public -cvz . > site.tar.gz
 
 .PHONY: serve
-## serve: Serve content on port 8000
+## serve: Serve content
 serve:
 	@echo "Serving..."
-	@pelican -l ./content -o ./output -s ./pelicanconf.py -t ./themes/resume -b 0.0.0.0
+	@resume serve
 
 .PHONY: deploy
-## deploy: Deploy to Netlify
+## deploy: Deploy to SourceHut
 deploy:
 	@echo "Uploading..."
-	@netlify deploy --dir=output --prod --build
+	@curl --oauth2-bearer "${ACCESS_TOKEN}" -F content=@site.tar.gz https://pages.sr.ht/publish/cv.karolak.fr
 
 .PHONY: clean
 ## clean: Remove generated files
 clean:
-	@[ ! -d ./output ] || rm -rf ./output
+	@[ ! -d ./public ] || rm -rf ./public
+	@[ ! -f ./site.tar.gz ] || rm -rf ./site.tar.gz
 
 .PHONY: help
 ## help: Prints this help message

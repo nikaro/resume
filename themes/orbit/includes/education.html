@@ -1,0 +1,12 @@
+{% if education %}
+<div class="education-container container-block">
+<h2 class="container-block-title">Formation</h2>
+{% for item in education %}
+    <div class="item">
+	    <h4 class="degree">{{ item.studyType }} {{ item.area }}</h4>
+	    <h5 class="meta">{{ item.institution }}</h5>
+        <div class="time">{{ item.startDate }} — {{ item.endDate }}</div>
+	</div><!--//item-->
+{% endfor %}
+</div><!--//education-container-->
+{% endif %}

@@ -1,0 +1,13 @@
+{% if meta.download | d() %}
+<div class="download-container container-block">
+	<h2 class="container-block-title">Télécharger</h2>
+	<ul class="list-unstyled interests-list">
+    {% if meta.download.pdf | d() %}
+        <li><a href="{{ meta.download.pdf }}">PDF</a></li>
+    {% endif %}
+    {% if meta.download.json | d() %}
+        <li><a href="{{ meta.download.json }}">JSON</a></li>
+    {% endif %}
+	</ul>
+</div><!--//interests-->
+{% endif %}

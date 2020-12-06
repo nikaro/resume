@@ -1,0 +1,372 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Nicolas Karolak",
+    "label": "Ingénieur Systèmes Linux",
+    "image": "photo.jpg",
+    "email": "nicolas@karolak.fr",
+    "phone": "+33651422138",
+    "summary": "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.",
+    "location": {
+      "address": "62 rue Paul Gauguin",
+      "postalCode": "77550",
+      "city": "Moissy-Cramayel",
+      "countryCode": "FR",
+      "region": "Île-de-France"
+    },
+    "profiles": [
+      {
+        "network": "globe",
+        "username": "blog.karolak.fr",
+        "url": "https://blog.karolak.fr/"
+      },
+      {
+        "network": "git-square",
+        "username": "sr.ht/~nka",
+        "url": "https://sr.ht/~nka/"
+      },
+      {
+        "network": "github",
+        "username": "github.com/nikaro",
+        "url": "https://github.com/nikaro/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "BoondManager",
+      "location": "Télétravail",
+      "description": "ERP pour ESN et cabinets de conseil",
+      "position": "Ignénieur Systèmes Linux",
+      "url": "https://www.boondmanager.com/",
+      "startDate": "2020.10",
+      "endDate": "2021.06",
+      "summary": "",
+      "highlights": [
+        "Mise en place GlusterFS",
+        "Mise en place MariaDB Galera Cluster",
+        "Écriture de tests de charge avec Locust",
+        "Scripting Bash et Ansible"
+      ]
+    },
+    {
+      "name": "IUT de Sénart/Fontainebleau",
+      "location": "Lieusaint",
+      "description": "",
+      "position": "Enseignant vacataire en Licence Pro",
+      "url": "https://www.iutsf.u-pec.fr/",
+      "startDate": "2012.10",
+      "endDate": "Ajourd'hui",
+      "summary": "",
+      "highlights": [
+        "Scripting (Python, Perl)",
+        "Chiffrement et Certificats",
+        "VPN"
+      ]
+    },
+    {
+      "name": "Université Gustave Eiffel",
+      "location": "Télétravail / Champs-sur-Marne",
+      "description": "Spécialisation dans les domaines de la ville durable",
+      "position": "Ingénieur Systèmes Linux",
+      "url": "https://www.univ-gustave-eiffel.fr/",
+      "startDate": "2020.05",
+      "endDate": "2020.10",
+      "summary": "",
+      "highlights": [
+        "Déploiement de service (WireGuard, pfSense, etc.)",
+        "Écriture d'un démon de logging pour WireGuard en Python"
+      ]
+    },
+    {
+      "name": "UbiCast",
+      "location": "Télétravail / Ivry-sur-Seine",
+      "description": "Outils vidéo pour une pédagogie hybride et numérique",
+      "position": "Ingénieur Systèmes Linux",
+      "url": "https://www.ubicast.eu/",
+      "startDate": "2017.09",
+      "endDate": "2020.04",
+      "summary": "",
+      "highlights": [
+        "Déploiements avec Terraform, Packer et Ansible",
+        "Portage des scripts Python/Bash vers Ansible",
+        "Mise en haute-disponibilité (PostreSQL, HAProxy, etc.)"
+      ]
+    },
+    {
+      "name": "Lycée Technique Privé Saint-Nicolas",
+      "location": "Paris",
+      "description": "",
+      "position": "Responsable Informatique",
+      "url": "https://www.lyceesaintnicolas.com/",
+      "startDate": "2016.09",
+      "endDate": "2017.07",
+      "summary": "",
+      "highlights": [
+        "Développement d'un gestionnaire de comptes utilisateurs (Django)",
+        "Migration serveur de messagerie interne (Postfix, Dovecot)",
+        "Mise en place Nextcloud pour les professeurs et étudiants"
+      ]
+    },
+    {
+      "name": "IUT de Sénart/Fontainebleau",
+      "location": "Lieusaint",
+      "description": "",
+      "position": "Administrateur Systèmes et Réseaux",
+      "url": "https://www.iutsf.u-pec.fr/",
+      "startDate": "2015.09",
+      "endDate": "2016.09",
+      "summary": "",
+      "highlights": [
+        "Administration système (Debian/Ubuntu)",
+        "Développement (PHP/Bash/Python)",
+        "Exploitation de parc (Ubuntu/Windows)teaud'eau)"
+      ]
+    },
+    {
+      "name": "Lycée Technique Privé Saint-Nicolas",
+      "location": "Paris",
+      "description": "",
+      "position": "Administrateur Systèmes et Réseaux",
+      "url": "https://www.lyceesaintnicolas.com/",
+      "startDate": "2011.07",
+      "endDate": "2014.12",
+      "summary": "",
+      "highlights": [
+        "Administration serveurs GNU/Linux et Windows",
+        "Conception nouvelle infrastructure : Virtualisation, VPN, Active Directory, etc."
+      ]
+    },
+    {
+      "name": "Châteaud'eau",
+      "location": "La Courneuve",
+      "description": "",
+      "position": "Technicien Support",
+      "url": "https://www.chateaudeau.com/",
+      "startDate": "2011.07",
+      "endDate": "2009.07",
+      "summary": "",
+      "highlights": [
+        "Gestion, maintenance, installation (Serveurs & PC)",
+        "Participation à l'implémentation de projets d'infrastructure",
+        "Pilotage de la migration de l'ancien logiciel client ERP vers le nouveau"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Université Paris-Est Créteil",
+      "url": "https://www.iutsf.u-pec.fr",
+      "area": "Administration des Systèmes et Réseaux",
+      "studyType": "Licence Pro",
+      "startDate": "2011.10",
+      "endDate": "2012.06",
+      "score": "16",
+      "courses": []
+    },
+    {
+      "institution": "Institut Medicis Alternance",
+      "url": "https://groupemedicis.com/",
+      "area": "Administration des Réseaux Locaux d'Entreprise",
+      "studyType": "BTS",
+      "startDate": "2009.09",
+      "endDate": "2011.05",
+      "score": "12",
+      "courses": []
+    },
+    {
+      "institution": "Lycée Jacques Prévert",
+      "url": "https://lyceemetierscombs.net/",
+      "area": "Micro-informatique et Réseaux : Installation et Maintenance",
+      "studyType": "Bac Pro",
+      "startDate": "2007.09",
+      "endDate": "2009.06",
+      "score": "15",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Linux",
+      "level": "Master",
+      "keywords": [
+        "Debian",
+        "CentOS",
+        "ArchLinux"
+      ]
+    },
+    {
+      "name": "Infrastructure-as-Code",
+      "level": "Advanced",
+      "keywords": [
+        "Ansible",
+        "Git",
+        "GitLab CI",
+        "Terraform"
+      ]
+    },
+    {
+      "name": "Scripting",
+      "level": "Advanced",
+      "keywords": [
+        "Python",
+        "Bash",
+        "Go",
+        "PHP"
+      ]
+    },
+    {
+      "name": "Web",
+      "level": "Advanced",
+      "keywords": [
+        "Nginx",
+        "Apache2",
+        "HAProxy"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "level": "Intermediate",
+      "keywords": [
+        "Scaleway",
+        "OVH",
+        "AWS"
+      ]
+    },
+    {
+      "name": "Virtualisation",
+      "level": "Intermediate",
+      "keywords": [
+        "Docker",
+        "KVM",
+        "LXC",
+        "LXD"
+      ]
+    },
+    {
+      "name": "Base de données",
+      "level": "Intermediate",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "MariaDB",
+        "Galera Cluster",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Réseaux",
+      "level": "Intermediate",
+      "keywords": [
+        "Pare-feu",
+        "Routage",
+        "VLAN",
+        "OpenVPN",
+        "WireGuard"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Anglais écrit",
+      "fluencyDisplay": "Autonome (C1)",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Anglais oral",
+      "fluencyDisplay": "Intermédiaire (B1)",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Français",
+      "fluencyDisplay": "Langue maternelle",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sports",
+      "keywords": [
+        "Judo",
+        "Randonnée"
+      ]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "contributions",
+      "description": "Plusieurs soumissions dans quelques projets Open Source, tels que Ansible, Pyinfra, Rss2email, Rss-Bridge, et de nombreux rapports de bogues.",
+      "highlights": [],
+      "keywords": [
+        "OpenSource",
+        "Git",
+        "Community"
+      ],
+      "startDate": "2013-09",
+      "url": "https://github.com/nikaro",
+      "roles": [],
+      "entity": "",
+      "type": "application"
+    },
+    {
+      "name": "devc",
+      "description": "Outil de gestion de devcontainer en CLI, écrit en Go. Un devcontainer permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.",
+      "highlights": [],
+      "keywords": [
+        "Container",
+        "Docker",
+        "Golang"
+      ],
+      "startDate": "2019-12",
+      "url": "https://sr.ht/~nka/devc",
+      "roles": [],
+      "entity": "",
+      "type": "application"
+    },
+    {
+      "name": "resume-pycli",
+      "description": "Outil de génération de CV au format HTML et PDF, écrit en Python. Utilise le format JSONResume et est inspiré de l'outil resume-cli.",
+      "highlights": [],
+      "keywords": [
+        "Resume",
+        "JSONResume",
+        "Python"
+      ],
+      "startDate": "2021-05",
+      "url": "https://sr.ht/~nka/resume-pycli",
+      "roles": [],
+      "entity": "",
+      "type": "application"
+    },
+    {
+      "name": "infra",
+      "description": "Dépôt contenant les scripts de déploiement et d'orchestration de mon infrastructure personnelle (serveur de messagerie, web, Nextcloud, etc.), en Ansible et Terraform.",
+      "highlights": [],
+      "keywords": [
+        "Ansible",
+        "Terraform",
+        "Infrastructure"
+      ],
+      "startDate": "2020-05",
+      "url": "https://git.sr.ht/~nka/infra",
+      "roles": [],
+      "entity": "",
+      "type": "scripts"
+    }
+  ],
+  "meta": {
+    "canonical": "https://git.sr.ht/~nka/cv/tree/main/item/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2021-06-01T18:30:00",
+    "theme": "orbit",
+    "css_variant": "main-6",
+    "download": {
+      "pdf": "/index.pdf",
+      "json": "https://git.sr.ht/~nka/cv/blob/main/resume.json"
+    }
+  }
+}

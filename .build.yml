@@ -1,25 +1,26 @@
-image: alpine/latest
+---
+
+image: archlinux
 packages:
+  - gtk3
   - make
-  - npm
-  - py3-pip
-sources:
-  - https://git.sr.ht/~nka/cv
-secrets:
-  - 2c93dcdd-ab19-4fe7-86af-a48cfa32cf07
-  - 56c2978b-f580-4476-bfde-ae806e5bf291
+  - python-pip
+  - wkhtmltopdf
+oauth: pages.sr.ht/PAGES:RW
+triggers:
+  - action: email
+    condition: always
+    to: Nicolas Karolak <nicolas@karolak.fr>
+environment:
+  PATH: /home/build/.local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  site: cv.karolak.fr
 tasks:
-  - buildenv: |
-      cat ~/.netlify-auth-token >> ~/.buildenv
-      cat ~/.netlify-site-id >> ~/.buildenv
-      echo 'export PATH=$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' >> ~/.buildenv
-      npm config set prefix ~/.local
   - setup: |
       cd cv
       make setup
   - build: |
       cd cv
       make build
-  - deploy: |
+  - upload: |
       cd cv
-      make deploy
+      acurl -f https://pages.sr.ht/publish/$site -F content=@site.tar.gz

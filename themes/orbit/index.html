@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang | d('en') }}">
+<head>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="{{ basics.name }}" />
+    <meta name="description" content="{{ basics.name }} - {{ basics.label }}" />
+
+    <title>{{ basics.name }} - {{ basics.label }}</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <style type="text/css">
+        {% include 'static/css/' + meta.css_variant | d('main') + '.css' %}
+    </style>
+
+</head>
+
+<body id="index" class="home">
+
+    <div class="wrapper">
+        {% include 'includes/sidebar.html' %}
+        <div class="main-wrapper">
+            {% include 'includes/career-profile.html' %}
+            {% include 'includes/experience.html' %}
+            {% include 'includes/projects.html' %}
+            {% include 'includes/skills.html' %}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        {% include 'static/js/main.js' %}
+    </script>
+
+</body>
+</html>
