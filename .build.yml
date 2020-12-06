@@ -19,7 +19,7 @@ tasks:
       make setup
   - build: |
       cd cv
-      make publish
+      make build
   - deploy: |
       cd cv
       make deploy
