@@ -1,9 +1,25 @@
 image: alpine/latest
+packages:
+  - make
+  - npm
+  - py3-pip
+sources:
+  - https://git.sr.ht/~nka/cv
 secrets:
-  - 8a197a79-b688-47cf-8f5c-2ffe1bc2495e
+  - 2c93dcdd-ab19-4fe7-86af-a48cfa32cf07
+  - 56c2978b-f580-4476-bfde-ae806e5bf291
 tasks:
-  - mirror: |
+  - buildenv: |
+      cat ~/.netlify-auth-token >> ~/.buildenv
+      cat ~/.netlify-site-id >> ~/.buildenv
+      echo 'export PATH=$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' >> ~/.buildenv
+      npm config set prefix ~/.local
+  - setup: |
       cd cv
-      ssh-keyscan github.com >> ~/.ssh/known_hosts
-      git remote add github git@github.com:nikaro/cv.git
-      git push github master
+      make setup
+  - build: |
+      cd cv
+      make publish
+  - deploy: |
+      cd cv
+      make deploy
