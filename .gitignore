@@ -1,2 +1,5 @@
 output/
 pdf/
+
+# Local Netlify folder
+.netlify
