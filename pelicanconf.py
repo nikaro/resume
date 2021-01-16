@@ -113,7 +113,7 @@ EXPERIENCES = [
     {
         "job_title": "Administrateur Systèmes Linux",
         "time": "Octobre 2020 - Aujourd'hui",
-        "company": "Université Gustave Eiffel, Champs-sur-Marne",
+        "company": "BoondManager, Télétravail",
         "details": [
             "Mise en place cluster GlusterFS",
             "Écriture de tests de charge avec Locust",
@@ -142,7 +142,7 @@ EXPERIENCES = [
     {
         "job_title": "Ingénieur Systèmes Linux",
         "time": "Sep. 2017 - Avril 2020",
-        "company": "UbiCast, Ivry-sur-Seine",
+        "company": "UbiCast, Ivry-sur-Seine, Télétravail",
         "details": [
             "Déploiement d'infrastructure avec Terraform, Packer et Ansible",
             "Portage des scripts de déploiement (Python/Bash) vers Ansible",
