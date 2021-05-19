@@ -56,11 +56,11 @@ SKILLS = [
         "level": "70",
     },
     {
-        "title": "Virtualisation : LXD/LXC, KVM, Docker",
+        "title": "Virtualisation : Docker, KVM, LXC, LXD",
         "level": "60",
     },
     {
-        "title": "Cloud : AWS, Scaleway, OVH",
+        "title": "Cloud : Scaleway, OVH, AWS",
         "level": "50",
     },
     {
@@ -68,8 +68,8 @@ SKILLS = [
         "level": "50",
     },
     {
-        "title": "Réseaux : Pare-feu, Routage, VLAN",
-        "level": "60",
+        "title": "Réseaux : Pare-feu, Routage, VLAN, OpenVPN, WireGuard",
+        "level": "50",
     },
 ]
 
