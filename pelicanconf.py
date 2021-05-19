@@ -29,7 +29,6 @@ PIC = "../../images/photo.jpg"
 EMAIL = "nicolas@karolak.fr"
 PHONE = "+33651422138"
 WEBSITE = "blog.karolak.fr"
-LINKEDIN = "nicolas-karolak"
 GITHUB = "nikaro"
 SOURCEHUT = "nka"
 TWITTER = None
