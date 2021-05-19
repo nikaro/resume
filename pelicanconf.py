@@ -41,27 +41,31 @@ CAREER_SUMMARY = "Passionné d'informatique. Orienté Linux et automatisation. A
 SKILLS = [
     {
         "title": "Linux : Debian, CentOS, ArchLinux",
+        "level": "90",
+    },
+    {
+        "title": "Scripting : Bash, Python, PHP, Go",
         "level": "80",
     },
     {
         "title": "IaC : Ansible, Git, Gitlab CI, Terraform",
-        "level": "90",
-    },
-    {
-        "title": "Web : NGINX, HAProxy, Apache2",
         "level": "80",
     },
     {
-        "title": "Virtualisation : LXD/LXC, KVM, Docker",
+        "title": "Web : NGINX, HAProxy, Apache2",
         "level": "70",
+    },
+    {
+        "title": "Virtualisation : LXD/LXC, KVM, Docker",
+        "level": "60",
     },
     {
         "title": "Cloud : AWS, Scaleway, OVH",
         "level": "50",
     },
     {
-        "title": "Scripting : Bash, Python, PHP, Golang",
-        "level": "80",
+        "title": "Base de données : PostgreSQL, MySQL, MariaDB, Galera Cluster, Redis",
+        "level": "50",
     },
     {
         "title": "Réseaux : Pare-feu, Routage, VLAN",
@@ -76,8 +80,13 @@ PROJECTS = [
     },
     {
         "title": "Devc",
-        "link": "https://git.sr.ht/~nka/devc",
+        "link": "https://sr.ht/~nka/devc",
         "tagline": "Outil de gestion de devcontainer en CLI, écrit en Go. Un devcontainer permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.",
+    },
+    {
+        "title": "Resume-PyCLI",
+        "link": "https://sr.ht/~nka/resume-pycli",
+        "tagline": "Générateur de CV au formats HTML et PDF, écrit en Python, avec le moteur de template Jinja. Utilise le format JSONResume, et est inspiré de l'outil resume-cli.",
     },
     {
         "title": "Infra",
@@ -89,11 +98,15 @@ PROJECTS = [
 LANGUAGES = [
     {
         "name": "Français",
-        "description": "Courant",
+        "description": "Langue maternelle",
     },
     {
-        "name": "Anglais",
-        "description": "Professionnel",
+        "name": "Anglais écrit",
+        "description": "Autonome (C1)",
+    },
+    {
+        "name": "Anglais oral",
+        "description": "Intermédiaire (B1)",
     },
 ]
 
