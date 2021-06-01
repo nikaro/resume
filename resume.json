@@ -359,10 +359,12 @@
     }
   ],
   "meta": {
+    "url": "https://cv.karolak.fr",
     "canonical": "https://git.sr.ht/~nka/cv/tree/main/item/resume.json",
     "version": "v1.0.0",
     "lastModified": "2021-06-01T18:30:00",
     "theme": "orbit",
+    "lang": "fr",
     "css_variant": "main-6",
     "download": {
       "pdf": "/index.pdf",

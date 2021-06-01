@@ -12,6 +12,8 @@ setup:
 build:
 	@echo "Rendering..."
 	@resume validate --schema schema.json
+	@mkdir -p public/
+	@[ -d themes/$(shell jq .meta.theme resume.json)/static ] && cp -r themes/$(shell jq .meta.theme resume.json)/static/* public/
 	@resume export
 	@tar -C public -cvz . > site.tar.gz
 
