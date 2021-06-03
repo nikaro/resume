@@ -30,7 +30,7 @@ html: validate
 build: pdf html
 	@echo "Building..."
 	@mkdir -p public/
-	@[ -d themes/$(shell jq .meta.theme resume.json)/assets ] && cp -r themes/$(shell jq .meta.theme resume.json)/assets/* public/
+	@[ -d themes/$(shell jq .meta.theme resume.json)/assets ] && cp -r themes/$(shell jq .meta.theme resume.json)/assets public/
 	@tar -C public -cz . > site.tar.gz
 
 .PHONY: watch
