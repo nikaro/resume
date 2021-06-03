@@ -1,0 +1,28 @@
+<header class="resume-header pt-4 pt-md-0">
+    <div class="media flex-column flex-md-row">
+        <img class="mr-3 img-fluid picture mx-auto" src="data:image/jpeg;base64,{{ basics.image | safe }}" alt="profile picture">
+        <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+            <div class="primary-info">
+                <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ basics.name }}</h1>
+                <div class="title mb-3">{{ basics.label }}</div>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="mailto:{{ basics.email }}"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>{{ basics.email }}</a></li>
+                    <li><a href="tel:{{ basics.phone }}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{ basics.phone }}</a></li>
+                </ul>
+            </div><!--//primary-info-->
+            {% if basics.profiles | d() %}
+            <div class="secondary-info ml-md-auto mt-2">
+                <ul class="resume-social list-unstyled">
+                    {% for profile in basics.profiles %}
+                    <li class="mb-3"><a href="{{ profile.url }}"><span class="fa-container text-center mr-2"><i class="fab fa-{{ profile.network }} fa-fw"></i></span>{{ profile.username }}</a></li>
+                    {% endfor %}
+                    {% if basics.url | d() %}
+                    <li><a href="{{ basics.url }}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>{{ basics.url | replace('http://', '') | replace('https://', '') }}</a></li>
+                    {% endif %}
+                </ul>
+            </div><!--//secondary-info-->
+            {% endif %}
+            
+        </div><!--//media-body-->
+    </div><!--//media-->
+</header>

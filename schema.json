@@ -268,8 +268,7 @@
           },
           "date": {
             "type": "string",
-            "description": "e.g. 1989-06-12",
-            "format": "date"
+            "description": "e.g. 1989.06"
           },
           "url": {
             "type": "string",

@@ -1,0 +1,16 @@
+{% if education | d() %}
+<section class="resume-section education-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Formation</h2>
+    <div class="resume-section-content">
+        <ul class="list-unstyled">
+            <li class="mb-2">
+                {% for item in education %}
+                <div class="resume-degree font-weight-bold">{{ item.studyType }} {{ item.area }}</div>
+                <div class="resume-degree-org">{{ item.institution }}</div>
+                <div class="resume-degree-time">{{ item.startDate }} — {{ item.endDate }}</div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section><!--//education-section-->
+{% endif %}

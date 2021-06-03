@@ -1,0 +1,23 @@
+{% if skills | d() %}
+{% set skill_level = {'Beginner': 25, 'Intermediate': 50, 'Advanced': 75, 'Master': 100} %}
+<section class="resume-section skills-section mb-5">
+    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Compétences</h2>
+    <div class="resume-section-content">
+        {% for skill in skills %}
+        <div class="resume-skill-item">
+            <h4 class="resume-skills-cat font-weight-bold">{{ skill.name }}</h4>
+            <div class="progress resume-progress">
+                <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: {{ skill_level[skill.level] }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <ul class="list-inline">
+                {% for keyword in skill.keywords %}
+                <li class="list-inline-item">
+                    <span class="badge badge-light">{{ keyword }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div><!--//resume-skill-item-->
+        {% endfor %}
+    </div><!--resume-section-content-->
+</section><!--//skills-section-->
+{% endif %}

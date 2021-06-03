@@ -6,6 +6,7 @@
     "image": "photo.jpg",
     "email": "nicolas@karolak.fr",
     "phone": "+33651422138",
+    "url": "https://blog.karolak.fr",
     "summary": "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.",
     "location": {
       "address": "62 rue Paul Gauguin",
@@ -16,12 +17,7 @@
     },
     "profiles": [
       {
-        "network": "globe",
-        "username": "blog.karolak.fr",
-        "url": "https://blog.karolak.fr/"
-      },
-      {
-        "network": "git-square",
+        "network": "git",
         "username": "sr.ht/~nka",
         "url": "https://sr.ht/~nka/"
       },
@@ -50,7 +46,7 @@
       ]
     },
     {
-      "name": "IUT de Sénart/Fontainebleau",
+      "name": "IUT de Sénart",
       "location": "Lieusaint",
       "description": "",
       "position": "Enseignant vacataire en Licence Pro",
@@ -109,7 +105,7 @@
       ]
     },
     {
-      "name": "IUT de Sénart/Fontainebleau",
+      "name": "IUT de Sénart",
       "location": "Lieusaint",
       "description": "",
       "position": "Administrateur Systèmes et Réseaux",
@@ -143,8 +139,8 @@
       "description": "",
       "position": "Technicien Support",
       "url": "https://www.chateaudeau.com/",
-      "startDate": "2011.07",
-      "endDate": "2009.07",
+      "startDate": "2009.07",
+      "endDate": "2011.07",
       "summary": "",
       "highlights": [
         "Gestion, maintenance, installation (Serveurs & PC)",
@@ -291,14 +287,30 @@
       "name": "Sports",
       "keywords": [
         "Judo",
+        "Escalade",
         "Randonnée"
+      ]
+    },
+    {
+      "name": "Culture",
+      "keywords": [
+        "Science-fiction",
+        "Fantastique",
+        "Astronomie"
+      ]
+    },
+    {
+      "name": "Technologies",
+      "keywords": [
+        "Auto-hébergement",
+        "Programmation"
       ]
     }
   ],
   "references": [],
   "projects": [
     {
-      "name": "contributions",
+      "name": "Contributions",
       "description": "Plusieurs soumissions dans quelques projets Open Source, tels que Ansible, Pyinfra, Rss2email, Rss-Bridge, et de nombreux rapports de bogues.",
       "highlights": [],
       "keywords": [
@@ -306,14 +318,14 @@
         "Git",
         "Community"
       ],
-      "startDate": "2013-09",
+      "startDate": "2013.09",
       "url": "https://github.com/nikaro",
       "roles": [],
       "entity": "",
       "type": "application"
     },
     {
-      "name": "devc",
+      "name": "Devc",
       "description": "Outil de gestion de devcontainer en CLI, écrit en Go. Un devcontainer permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.",
       "highlights": [],
       "keywords": [
@@ -321,14 +333,14 @@
         "Docker",
         "Golang"
       ],
-      "startDate": "2019-12",
+      "startDate": "2019.12",
       "url": "https://sr.ht/~nka/devc",
       "roles": [],
       "entity": "",
       "type": "application"
     },
     {
-      "name": "resume-pycli",
+      "name": "Resume-pycli",
       "description": "Outil de génération de CV au format HTML et PDF, écrit en Python. Utilise le format JSONResume et est inspiré de l'outil resume-cli.",
       "highlights": [],
       "keywords": [
@@ -336,14 +348,14 @@
         "JSONResume",
         "Python"
       ],
-      "startDate": "2021-05",
+      "startDate": "2021.05",
       "url": "https://sr.ht/~nka/resume-pycli",
       "roles": [],
       "entity": "",
       "type": "application"
     },
     {
-      "name": "infra",
+      "name": "Infra",
       "description": "Dépôt contenant les scripts de déploiement et d'orchestration de mon infrastructure personnelle (serveur de messagerie, web, Nextcloud, etc.), en Ansible et Terraform.",
       "highlights": [],
       "keywords": [
@@ -351,7 +363,7 @@
         "Terraform",
         "Infrastructure"
       ],
-      "startDate": "2020-05",
+      "startDate": "2020.05",
       "url": "https://git.sr.ht/~nka/infra",
       "roles": [],
       "entity": "",
@@ -359,13 +371,12 @@
     }
   ],
   "meta": {
-    "url": "https://cv.karolak.fr",
     "canonical": "https://git.sr.ht/~nka/cv/tree/main/item/resume.json",
     "version": "v1.0.0",
     "lastModified": "2021-06-01T18:30:00",
-    "theme": "orbit",
+    "theme": "pillar",
     "lang": "fr",
-    "css_variant": "main-6",
+    "css_variant": "pillar-2",
     "download": {
       "pdf": "/index.pdf",
       "json": "https://git.sr.ht/~nka/cv/blob/main/resume.json"

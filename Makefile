@@ -7,15 +7,37 @@ setup:
 	@echo "Installing..."
 	@command -v resumepy || pip install resume-pycli
 
-.PHONY: build
-## build: Generate outputs
-build:
-	@echo "Rendering..."
+.PHONY: validate
+## validate: Validate JSON
+validate:
+	@echo "Checking..."
 	@resume validate --schema schema.json
+
+.PHONY: pdf
+## pdf: Generate PDF
+pdf: validate
+	@echo "Rendering PDF..."
+	@resume export --pdf --theme stackoverflow
+
+.PHONY: html
+## html: Generate HTML
+html: validate
+	@echo "Rendering HTML..."
+	@resume export --html
+
+.PHONY: build
+## html: Generate site archive
+build: pdf html
+	@echo "Building..."
 	@mkdir -p public/
-	@[ -d themes/$(shell jq .meta.theme resume.json)/static ] && cp -r themes/$(shell jq .meta.theme resume.json)/static/* public/
-	@resume export
-	@tar -C public -cvz . > site.tar.gz
+	@[ -d themes/$(shell jq .meta.theme resume.json)/assets ] && cp -r themes/$(shell jq .meta.theme resume.json)/assets/* public/
+	@tar -C public -cz . > site.tar.gz
+
+.PHONY: watch
+## serve: Serve content
+watch:
+	@echo "Watching..."
+	@rg --files . | entr resume export --html
 
 .PHONY: serve
 ## serve: Serve content
