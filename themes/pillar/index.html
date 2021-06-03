@@ -11,7 +11,7 @@
     <meta name="author" content="{{ basics.name }}">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{ meta.url | d() }}/assets/css/roboto.css">
     <link id="theme-style" rel="stylesheet" href="{{ meta.url | d() }}/assets/css/{{ meta.css_variant | d('pillar-1') }}.css">
 
     <script defer src="{{ meta.url | d() }}/assets/fontawesome/js/all.min.js"></script>
