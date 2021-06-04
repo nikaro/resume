@@ -32,7 +32,7 @@
     {
       "name": "BoondManager",
       "location": "Télétravail",
-      "description": "ERP pour ESN et cabinets de conseil",
+      "description": "",
       "position": "Ignénieur Systèmes Linux",
       "url": "https://www.boondmanager.com/",
       "startDate": "2020.10",
@@ -43,6 +43,14 @@
         "Mise en place MariaDB Galera Cluster",
         "Écriture de tests de charge avec Locust",
         "Scripting Bash et Ansible"
+      ],
+      "keywords": [
+        "Ansible",
+        "Bash",
+        "PHP",
+        "MariaDB",
+        "GlusterFS",
+        "Galera Cluster"
       ]
     },
     {
@@ -58,12 +66,18 @@
         "Scripting (Python, Perl)",
         "Chiffrement et Certificats",
         "VPN"
+      ],
+      "keywords": [
+        "Python",
+        "TLS",
+        "Nginx",
+        "Docker"
       ]
     },
     {
       "name": "Université Gustave Eiffel",
       "location": "Télétravail / Champs-sur-Marne",
-      "description": "Spécialisation dans les domaines de la ville durable",
+      "description": "",
       "position": "Ingénieur Systèmes Linux",
       "url": "https://www.univ-gustave-eiffel.fr/",
       "startDate": "2020.05",
@@ -72,12 +86,17 @@
       "highlights": [
         "Déploiement de service (WireGuard, pfSense, etc.)",
         "Écriture d'un démon de logging pour WireGuard en Python"
+      ],
+      "keywords": [
+        "Ansible",
+        "Python",
+        "WireGuard"
       ]
     },
     {
       "name": "UbiCast",
       "location": "Télétravail / Ivry-sur-Seine",
-      "description": "Outils vidéo pour une pédagogie hybride et numérique",
+      "description": "",
       "position": "Ingénieur Systèmes Linux",
       "url": "https://www.ubicast.eu/",
       "startDate": "2017.09",
@@ -87,6 +106,16 @@
         "Déploiements avec Terraform, Packer et Ansible",
         "Portage des scripts Python/Bash vers Ansible",
         "Mise en haute-disponibilité (PostreSQL, HAProxy, etc.)"
+      ],
+      "keywords": [
+        "Ansible",
+        "Python",
+        "Go",
+        "Django",
+        "PostgreSQL",
+        "GitLab CI",
+        "Terraform",
+        "AWS"
       ]
     },
     {
@@ -102,6 +131,11 @@
         "Développement d'un gestionnaire de comptes utilisateurs (Django)",
         "Migration serveur de messagerie interne (Postfix, Dovecot)",
         "Mise en place Nextcloud pour les professeurs et étudiants"
+      ],
+      "keywords": [
+        "Ansible",
+        "Django",
+        "Nextcloud"
       ]
     },
     {
@@ -116,7 +150,12 @@
       "highlights": [
         "Administration système (Debian/Ubuntu)",
         "Développement (PHP/Bash/Python)",
-        "Exploitation de parc (Ubuntu/Windows)teaud'eau)"
+        "Exploitaton de parc (Ubuntu/Windows)"
+      ],
+      "keywords": [
+        "Linux",
+        "PHP",
+        "Centreon"
       ]
     },
     {
@@ -131,6 +170,11 @@
       "highlights": [
         "Administration serveurs GNU/Linux et Windows",
         "Conception nouvelle infrastructure : Virtualisation, VPN, Active Directory, etc."
+      ],
+      "keywords": [
+        "Linux",
+        "Windows Server",
+        "OpenVPN"
       ]
     },
     {
@@ -146,6 +190,9 @@
         "Gestion, maintenance, installation (Serveurs & PC)",
         "Participation à l'implémentation de projets d'infrastructure",
         "Pilotage de la migration de l'ancien logiciel client ERP vers le nouveau"
+      ],
+      "keywords": [
+        "Windows Server"
       ]
     }
   ],

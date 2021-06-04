@@ -25,11 +25,11 @@
                         {% endfor %}
                     </ul>
                     {% endif %}
-                    {% if item.stack | d() %}
+                    {% if item.keywords | d() %}
                     <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies:</h4>
                     <ul class="list-inline">
-                        {% for tech in item.stack %}
-                        <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ tech }}</span></li>
+                        {% for keyword in item.keywords %}
+                        <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ keyword }}</span></li>
                         {% endfor %}
                     </ul>
                     {% endif %}
