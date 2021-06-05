@@ -2,12 +2,11 @@
 
 image: archlinux
 packages:
-  - gtk3
   - jq
   - make
   - python-pip
   - resume-pycli
-  - wkhtmltopdf
+  - wkhtmltopdf-static
 oauth: pages.sr.ht/PAGES:RW
 triggers:
   - action: email
