@@ -2,6 +2,7 @@
 
 image: archlinux
 packages:
+  - gtk3
   - jq
   - make
   - python-pip
