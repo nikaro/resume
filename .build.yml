@@ -7,7 +7,7 @@ packages:
   - make
   - python-pip
   - resume-pycli
-  - wkhtmltopdf-static
+  - wkhtmltopdf
 oauth: pages.sr.ht/PAGES:RW
 triggers:
   - action: email
