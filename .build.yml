@@ -9,10 +9,6 @@ packages:
   - resume-pycli
   - wkhtmltopdf
 oauth: pages.sr.ht/PAGES:RW
-triggers:
-  - action: email
-    condition: always
-    to: Nicolas Karolak <nicolas@karolak.fr>
 environment:
   PATH: /home/build/.local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   site: cv.karolak.fr
