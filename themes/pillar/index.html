@@ -11,10 +11,10 @@
     <meta name="author" content="{{ basics.name }}">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
-    <link rel="stylesheet" href="{{ meta.url | d() }}/assets/css/roboto.css">
-    <link id="theme-style" rel="stylesheet" href="{{ meta.url | d() }}/assets/css/{{ meta.css_variant | d('pillar-1') }}.css">
+    <link rel="stylesheet" href="{{ meta.assets_url | d() }}/assets/css/roboto.css" integrity="sha384-V/jASFxBhvgXN5a19xwqhvn4q/JXBJB3Vym0wqar5scnbel9QYEhq1WbK2dUelN6">
+    <link id="theme-style" rel="stylesheet" href="{{ meta.assets_url | d() }}/assets/css/{{ meta.css_variant | d('pillar-1') }}.css" integrity="{{ meta.css_variant_integrity | d('sha384-7jn5wevIZeMxNJkaj10hzeA0nguTncy5TpZhfgXSr+plip0kg5jKafCAiEckB6dl') }}">
 
-    <script defer src="{{ meta.url | d() }}/assets/fontawesome/js/all.min.js"></script>
+    <script defer src="{{ meta.assets_url | d() }}/assets/fontawesome/js/all.min.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS"></script>
 
 </head> 
 

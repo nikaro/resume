@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "$schema": "https://git.sr.ht/~nka/cv/blob/main/schema.json",
   "basics": {
     "name": "Nicolas Karolak",
     "label": "Ingénieur Systèmes Linux",
@@ -424,6 +424,7 @@
     "theme": "pillar",
     "lang": "fr",
     "css_variant": "pillar-2",
+    "css_variant_integrity": "sha384-Omtznw2zAwMgvTINLarnhy1Ey9cYy7stsTX/93tixvhCV341e15cRmwrI0ZTSu4A",
     "download": {
       "pdf": "/index.pdf",
       "json": "https://git.sr.ht/~nka/cv/blob/main/resume.json"
