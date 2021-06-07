@@ -344,13 +344,6 @@ section .location {
   font-weight: 600;
 }
 
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-  content: "at ";
-}
-
 .company,
 .institution,
 .organization,
@@ -519,6 +512,11 @@ section .location {
 
 .level em {
   padding-left: 0.2em;
+}
+
+div .skills {
+  height: 0;
+  visibility: hidden;
 }
 
 .level .bar {
@@ -691,7 +689,7 @@ section .location {
   .institution::before,
   .organization::before,
   .awarder::before {
-    content: "at ";
+    content: "| ";
   }
   .main-summary {
     padding: 0;
@@ -750,18 +748,12 @@ section .location {
   .highlights {
     margin: 0.5em 0 0 0;
   }
-  ul.keywords::before {
-    content: "Skills acquired: ";
-  }
   #skills .keywords::before {
     content: none;
   }
   .section p {
     margin: 0;
     padding: 0;
-  }
-  ul.courses::before {
-    content: "Major courses: ";
   }
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {

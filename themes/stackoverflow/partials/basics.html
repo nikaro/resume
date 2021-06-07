@@ -41,7 +41,7 @@
 			{% if basics.url %}
 			<div class="website">
 				<span class="fas fa-external-link-alt"></span>
-				<a href="{{ basics.url }}">{{ basics.url }}</a>
+				<a href="{{ basics.url }}">{{ basics.url | replace('http://', '') | replace('https://', '') }}</a>
 			</div>
 			{% endif %}
 			{% if basics.email %}

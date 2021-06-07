@@ -1,7 +1,7 @@
 {% if work %}
 <section class="section">
   <header>
-    <h2 class='section-title'>Work Experience <span class="item-count">({{ work | length }})</span></h2>
+    <h2 class='section-title'>Expériences <span class="item-count">({{ work | length }})</span></h2>
   </header>
 
   <section id="work">
@@ -30,7 +30,7 @@
           {% if work_item.endDate %}
           <span class="endDate">- {{ work_item.endDate }}</span>
           {% else %}
-          <span class="endDate">- Current</span>
+          <span class="endDate">- Aujourd'hui</span>
           {% endif %}
         </div>
       </header>

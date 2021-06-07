@@ -1,7 +1,7 @@
 {% if education %}
 <section class="section">
   <header>
-    <h2 class='section-title'>Education <span class="item-count">({{ education | length }})</span></h2>
+    <h2 class='section-title'>Formations <span class="item-count">({{ education | length }})</span></h2>
   </header>
 
   <section id="education">
@@ -45,7 +45,7 @@
           </span>
           {% else %}
           <span class="endDate">
-          - Current
+          - Aujourd'hui
           </span>
           {% endif %}
         </div>
@@ -75,11 +75,6 @@
       {% endif %}
 
       <div class="item">
-        {% if education_item.score %}
-        <div class='gpa'>
-          <strong> Grade:</strong> <span>{{ education_item.score }}</span>
-        </div>
-        {% endif %}
         {% if education_item.summary %}
           <div class="summary">{{ education_item.summary | replace("\r\n", "<br>") | replace("\n", "<br>") | replace("\r", "<br>") }}</div>
         {% endif %}

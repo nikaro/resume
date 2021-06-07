@@ -1,7 +1,7 @@
 {% if skills %}
 <section class="section">
 	<header>
-		<h2 class='section-title'>Skills</h2>
+		<h2 class='section-title'>Compétences</h2>
 	</header>
 	<section id="skills">
 		{% for skill in  skills %}
@@ -11,7 +11,7 @@
 				{{ skill.name }}
 			</h3>
 			{% endif %} {% if skill.level %}
-			<div class="level {{ skill.level | lower }}">
+			<div class="skills level {{ skill.level | lower }}">
 				{% if skill.levelDisplay %}
 				<em>{{ skill.levelDisplay }}</em>
 				{% else %}

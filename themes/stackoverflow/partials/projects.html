@@ -1,7 +1,7 @@
 {% if projects %}
 <section class="section">
   <header>
-    <h2 class='section-title'>Projects <span class="item-count">({{ projects | length }})</span></h2>
+    <h2 class='section-title'>Projets <span class="item-count">({{ projects | length }})</span></h2>
   </header>
   <section id="projects">
     {% for project in projects %}
@@ -26,7 +26,7 @@
           {% if project.endDate %}
           <span class="endDate">- {{ project.endDate }}</span>
           {% else %}
-          <span class="endDate">- Current</span>
+          <span class="endDate">- Aujourd'hui</span>
           {% endif %}
         </div>
         {% endif %}
@@ -61,8 +61,8 @@
       </ul>
       {% endif %}
       <div class="item">
-        {% if project.summary %}
-          <div class="summary">{{ project.summary | replace("\r\n", "<br>") | replace("\n", "<br>") | replace("\r", "<br>") }}</div>
+        {% if project.description %}
+          <div class="summary">{{ project.description | replace("\r\n", "<br>") | replace("\n", "<br>") | replace("\r", "<br>") }}</div>
         {% endif %}
         {% if project.highlights %}
         <ul class="highlights">
