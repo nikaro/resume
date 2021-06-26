@@ -1,28 +1,14 @@
-FROM nikaro/archlinux-dev
+FROM nikaro/alpine-dev
 
 RUN \
     # install required tools
-    sudo pacman -Syu --noconfirm \
-        rsync \
-        texlive-bibtexextra \
-        texlive-bin \
-        texlive-core \
-        texlive-fontsextra \
-        texlive-formatsextra \
-        texlive-latexextra \
+    sudo apk add \
+        entr \
+        jq \
+        py3-pip \
+        ripgrep \
+        wkhtmltopdf \
+        xorg-server \
         && \
-    # clean up
-    sudo rm -r \
-        /var/lib/pacman/sync \
-        /var/cache/pacman/pkg \
-        &&  \
-    # pelican
-    python3 -m pip install --user \
-        pelican \
-        && \
-    # tlmgr
-    sudo sed -i 's@"$Master/../.."@"$Master/../../.."@' /usr/share/texmf-dist/scripts/texlive/tlmgr.pl && \
-    echo -e "\nalias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'" >> ~/.bashrc && \
-    /usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode init-usertree && \
-    /usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet && \
+    python3 -m pip install resume-pycli && \
     :
