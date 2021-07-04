@@ -14,8 +14,8 @@
                     <div class="resume-position-time">{{ item.startDate }} — {{ item.endDate | d("Aujourd'hui") }}</div>
                 </div><!--//resume-timeline-item-header-->
                 <div class="resume-timeline-item-desc">
-                    {% if item.description | d() %}
-                    <p>{{ item.description }}</p>
+                    {% if item.summary | d() %}
+                    <p>{{ item.summary }}</p>
                     {% endif %}
                     {% if item.highlights | d() %}
                     <h4 class="resume-timeline-item-desc-heading font-weight-bold">Réalisations</h4>
