@@ -5,6 +5,7 @@ packages:
   - gtk3
   - jq
   - make
+  - nerd-fonts
   - python-pip
   - resume-pycli
   - wkhtmltopdf
