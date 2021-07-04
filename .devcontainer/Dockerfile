@@ -5,6 +5,7 @@ RUN \
     sudo apk add \
         entr \
         jq \
+        nerd-fonts \
         py3-pip \
         ripgrep \
         wkhtmltopdf \

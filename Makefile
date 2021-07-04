@@ -43,7 +43,7 @@ watch:
 ## serve: Serve content
 serve:
 	@echo "Serving..."
-	@resume serve
+	@resume serve --bind 0.0.0.0
 
 .PHONY: deploy
 ## deploy: Deploy to SourceHut
