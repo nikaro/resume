@@ -9,8 +9,6 @@
     "url": "https://blog.karolak.fr",
     "summary": "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.",
     "location": {
-      "address": "62 rue Paul Gauguin",
-      "postalCode": "77550",
       "city": "Moissy-Cramayel",
       "countryCode": "FR",
       "region": "Île-de-France"
@@ -29,6 +27,19 @@
     ]
   },
   "work": [
+    {
+      "name": "Atexo",
+      "location": "Paris",
+      "description": "Créateur de solutions logicielles libres dédiées au secteur public.",
+      "position": "Ingénieur Systèmes Linux",
+      "url": "http://www.atexo.com/",
+      "startDate": "2021.06",
+      "summary": "",
+      "highlights": [],
+      "keywords": [
+        "Ansible"
+      ]
+    },
     {
       "name": "BoondManager",
       "location": "Télétravail",
@@ -198,6 +209,15 @@
   ],
   "volunteer": [],
   "education": [
+    {
+      "institution": "Université de Franche-Comté",
+      "url": "https://sup-fc.univ-fcomte.fr/fichemasterinformatiqueI2A",
+      "area": "Informatique Avancée et Applications",
+      "studyType": "Master",
+      "startDate": "2021.10",
+      "score": "",
+      "courses": []
+    },
     {
       "institution": "Université Paris-Est Créteil",
       "url": "https://www.iutsf.u-pec.fr",
@@ -419,8 +439,8 @@
   ],
   "meta": {
     "canonical": "https://git.sr.ht/~nka/cv/tree/main/item/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2021-06-01T18:30:00",
+    "version": "v1.1.0",
+    "lastModified": "2021-07-04T19:46:00",
     "theme": "pillar",
     "lang": "fr",
     "css_variant": "pillar-2",
