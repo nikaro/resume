@@ -4,8 +4,7 @@
     "name": "Nicolas Karolak",
     "label": "Ingénieur Systèmes Linux",
     "image": "photo.jpg",
-    "email": "nicolas@karolak.fr",
-    "phone": "+33651422138",
+    "email": "cv@karolak.fr",
     "url": "https://blog.karolak.fr",
     "summary": "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.",
     "location": {
@@ -35,9 +34,17 @@
       "url": "http://www.atexo.com/",
       "startDate": "2021.06",
       "summary": "",
-      "highlights": [],
+      "highlights": [
+        "Automatisation de l'infrastructure",
+        "Déploiement de plateformes",
+        "Maintien en conditions opérationnelles"
+      ],
       "keywords": [
-        "Ansible"
+        "Ansible",
+        "Apache2",
+        "MariaDB",
+        "Galera Cluster",
+        "HAProxy"
       ]
     },
     {
