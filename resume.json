@@ -19,6 +19,11 @@
         "url": "https://sr.ht/~nka/"
       },
       {
+        "network": "gitlab",
+        "username": "gitlab.com/nicolas-karolak",
+        "url": "https://gitlab.com/nicolas-karolak/"
+      },
+      {
         "network": "github",
         "username": "github.com/nikaro",
         "url": "https://github.com/nikaro/"
