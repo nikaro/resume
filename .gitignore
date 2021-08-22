@@ -3,5 +3,4 @@
 .vim/
 
 # outputs
-public/
 site.tar.gz
