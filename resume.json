@@ -1,5 +1,5 @@
 {
-  "$schema": "https://git.sr.ht/~nka/cv/blob/main/schema.json",
+  "$schema": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/schema.json",
   "basics": {
     "name": "Nicolas Karolak",
     "label": "Ingénieur Systèmes Linux",
@@ -13,11 +13,6 @@
       "region": "Île-de-France"
     },
     "profiles": [
-      {
-        "network": "git",
-        "username": "sr.ht/~nka",
-        "url": "https://sr.ht/~nka/"
-      },
       {
         "network": "gitlab",
         "username": "gitlab.com/nicolas-karolak",
@@ -413,7 +408,7 @@
         "Golang"
       ],
       "startDate": "2019.12",
-      "url": "https://sr.ht/~nka/devc",
+      "url": "https://github.com/nikaro/devc",
       "roles": [],
       "entity": "",
       "type": "application"
@@ -428,7 +423,7 @@
         "Python"
       ],
       "startDate": "2021.05",
-      "url": "https://sr.ht/~nka/resume-pycli",
+      "url": "https://github.com/nikaro/resume-pycli",
       "roles": [],
       "entity": "",
       "type": "application"
@@ -443,14 +438,14 @@
         "Infrastructure"
       ],
       "startDate": "2020.05",
-      "url": "https://git.sr.ht/~nka/infra",
+      "url": "https://gitlab.com/nicolas-karolak/infra",
       "roles": [],
       "entity": "",
       "type": "scripts"
     }
   ],
   "meta": {
-    "canonical": "https://git.sr.ht/~nka/cv/tree/main/item/resume.json",
+    "canonical": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/resume.json",
     "version": "v1.1.0",
     "lastModified": "2021-07-04T19:46:00",
     "theme": "pillar",
@@ -459,7 +454,7 @@
     "css_variant_integrity": "sha384-Omtznw2zAwMgvTINLarnhy1Ey9cYy7stsTX/93tixvhCV341e15cRmwrI0ZTSu4A",
     "download": {
       "pdf": "/index.pdf",
-      "json": "https://git.sr.ht/~nka/cv/blob/main/resume.json"
+      "json": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/resume.json"
     }
   }
 }
