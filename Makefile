@@ -1,6 +1,8 @@
 .PHONY: all
 all: help
 
+# openssl dgst -sha384 -binary FILENAME.js | openssl base64 -A
+
 .PHONY: setup
 ## setup: Install required tools
 setup:
