@@ -4,7 +4,7 @@ publish = "public/"
 [[headers]]
 for = "/*"
 [headers.values]
-Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'sha384-4HhX+l8Dv9NGBj02MO1e1LiiROR/owFS+CFA/IlPcTpSFXTo4tBa16u9s4dMRRpf' 'sha384-N6lhytFMVr6x5yd1mlQTADS3Vl3hw7KAEbVB0Y29zzWC2zMIRPBtLf+aQKN/peE3' 'sha384-ewp9B2vX+CtX2WSWu101hPGyPDnDml0fSibne9i0hPYZjgQZqxGZTp/tcy5pitYG'; img-src 'self' data:; form-action 'none'; frame-ancestors 'none'"
+Content-Security-Policy = "default-src 'self'; base-uri 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; form-action 'none'; frame-ancestors 'none'"
 Referrer-Policy = "no-referrer, strict-origin-when-cross-origin"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
