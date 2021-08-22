@@ -6,8 +6,12 @@
                 <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{ basics.name }}</h1>
                 <div class="title mb-3">{{ basics.label }}</div>
                 <ul class="list-unstyled">
+                    {% if basics.email | d() %}
                     <li class="mb-2"><a href="mailto:{{ basics.email }}"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>{{ basics.email }}</a></li>
+                    {% endfor %}
+                    {% if basics.phone | d() %}
                     <li><a href="tel:{{ basics.phone }}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{ basics.phone }}</a></li>
+                    {% endfor %}
                 </ul>
             </div><!--//primary-info-->
             {% if basics.profiles | d() %}
