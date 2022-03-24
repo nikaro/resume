@@ -8,7 +8,7 @@
     "url": "https://blog.karolak.fr",
     "summary": "Passionné d'informatique. Orienté Linux et automatisation. Amateur de logiciels libres et open source. Contributeur occasionnel. Télétravailleur. J'ai besoin que mon travail ait du sens et une utilité sociale.",
     "location": {
-      "city": "Moissy-Cramayel",
+      "city": "Melun",
       "countryCode": "FR",
       "region": "Île-de-France"
     },
@@ -44,7 +44,8 @@
         "Apache2",
         "MariaDB",
         "Galera Cluster",
-        "HAProxy"
+        "HAProxy",
+        "ZFS"
       ]
     },
     {
@@ -216,15 +217,6 @@
   ],
   "volunteer": [],
   "education": [
-    {
-      "institution": "Université de Franche-Comté",
-      "url": "https://sup-fc.univ-fcomte.fr/fichemasterinformatiqueI2A",
-      "area": "Informatique Avancée et Applications",
-      "studyType": "Master",
-      "startDate": "2021.10",
-      "score": "",
-      "courses": []
-    },
     {
       "institution": "Université Paris-Est Créteil",
       "url": "https://www.iutsf.u-pec.fr",

@@ -35,7 +35,7 @@ build: pdf html
 	@[ -d themes/$(shell jq .meta.theme resume.json)/assets ] && cp -r themes/$(shell jq .meta.theme resume.json)/assets public/
 
 .PHONY: watch
-## serve: Serve content
+## watch: Live-update resume on changes
 watch:
 	@echo "Watching..."
 	@rg --files . | entr resume export --html
