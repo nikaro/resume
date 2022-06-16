@@ -28,7 +28,7 @@ html: validate
 	@resume export --html
 
 .PHONY: build
-## html: Generate site archive
+## build: Generate site archive
 build: pdf html
 	@echo "Building..."
 	@mkdir -p public/
