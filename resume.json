@@ -124,7 +124,7 @@
       "highlights": [
         "Déploiements avec Terraform, Packer et Ansible",
         "Portage des scripts Python/Bash vers Ansible",
-        "Mise en haute-disponibilité (PostreSQL, HAProxy, etc.)"
+        "Mise en haute-disponibilité (PostgreSQL, HAProxy, etc.)"
       ],
       "keywords": [
         "Ansible",
