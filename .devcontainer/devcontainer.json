@@ -1,7 +1,5 @@
 {
   "name": "cv",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "vim-extensions": [],
-  "vim-settings": []
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [4000]
 }

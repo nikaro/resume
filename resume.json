@@ -276,8 +276,7 @@
       "keywords": [
         "Python",
         "Bash",
-        "Go",
-        "PHP"
+        "Go"
       ]
     },
     {
@@ -391,13 +390,44 @@
       "type": "application"
     },
     {
+      "name": "Wirelogd",
+      "description": "Outil de logging de l'état de connexion des utilisateurs Wireguard.",
+      "highlights": [],
+      "keywords": [
+        "Go",
+        "Python",
+        "Logging",
+        "VPN"
+      ],
+      "startDate": "2020.06",
+      "url": "https://github.com/nikaro/wirelogd",
+      "roles": [],
+      "entity": "",
+      "type": "application"
+    },
+    {
+      "name": "Zabbixmon",
+      "description": "Outil de supervision Zabbix en ligne de commande.",
+      "highlights": [],
+      "keywords": [
+        "Go",
+        "Supervision",
+        "VPN"
+      ],
+      "startDate": "2020.06",
+      "url": "https://github.com/nikaro/zabbixmon",
+      "roles": [],
+      "entity": "",
+      "type": "application"
+    },
+    {
       "name": "Devc",
-      "description": "Outil de gestion de devcontainer en CLI, écrit en Go. Un devcontainer permet d'isoler les outils de l'environnement de développement dans un conteneur Docker en lien avec l'éditeur de code.",
+      "description": "Outil de gestion de devcontainer en ligne de commande.",
       "highlights": [],
       "keywords": [
         "Container",
         "Docker",
-        "Golang"
+        "Go"
       ],
       "startDate": "2019.12",
       "url": "https://github.com/nikaro/devc",

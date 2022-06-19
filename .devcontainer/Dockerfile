@@ -1,15 +1,19 @@
-FROM nikaro/alpine-dev
+FROM debian:stable-slim
 
 RUN \
     # install required tools
-    sudo apk add \
+    apt-get update --yes && \
+    apt-get install --yes \
+        bash-completion \
+        bsdmainutils \
         entr \
+        git \
         jq \
-        nerd-fonts \
-        py3-pip \
+        python3-pip \
         ripgrep \
         wkhtmltopdf \
-        xorg-server \
         && \
+    git clone https://github.com/ryanoasis/nerd-fonts.git /usr/local/share/nerd-fonts && \
+    /usr/local/share/nerd-fonts/install.sh --install-to-system-path && \
     python3 -m pip install resume-pycli && \
     :
