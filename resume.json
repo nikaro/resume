@@ -256,7 +256,7 @@
       "level": "Master",
       "keywords": [
         "Debian",
-        "CentOS",
+        "Ubuntu",
         "ArchLinux"
       ]
     },
@@ -327,6 +327,14 @@
         "VLAN",
         "OpenVPN",
         "WireGuard"
+      ]
+    },
+    {
+      "name": "Stockage",
+      "level": "Intermediate",
+      "keywords": [
+        "ZFS",
+        "GlusterFS"
       ]
     }
   ],
