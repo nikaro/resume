@@ -13,7 +13,7 @@ RUN \
         ripgrep \
         wkhtmltopdf \
         && \
-    git clone https://github.com/ryanoasis/nerd-fonts.git /usr/local/share/nerd-fonts && \
+    git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git /usr/local/share/nerd-fonts && \
     /usr/local/share/nerd-fonts/install.sh --install-to-system-path && \
     python3 -m pip install resume-pycli && \
     :

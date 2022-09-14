@@ -1,5 +1,7 @@
 {
   "name": "cv",
-  "dockerFile": "Dockerfile",
-  "forwardPorts": [4000]
+  "build": {
+    "dockerFile": "Dockerfile"
+  },
+  "forwardPorts": ["4000:4000"]
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/schema.json",
+  "$schema": "https://github.com/nikaro/resume/raw/main/schema.json",
   "basics": {
     "name": "Nicolas Karolak",
     "label": "Ingénieur Systèmes Linux",
@@ -13,11 +13,6 @@
       "region": "Île-de-France"
     },
     "profiles": [
-      {
-        "network": "gitlab",
-        "username": "gitlab.com/nicolas-karolak",
-        "url": "https://gitlab.com/nicolas-karolak/"
-      },
       {
         "network": "github",
         "username": "github.com/nikaro",
@@ -49,6 +44,27 @@
       ]
     },
     {
+      "name": "IUT de Sénart",
+      "location": "Lieusaint",
+      "description": "",
+      "position": "Enseignant vacataire en Licence Pro",
+      "url": "https://www.iutsf.u-pec.fr/",
+      "startDate": "2012.10",
+      "endDate": "Aujourd'hui",
+      "summary": "",
+      "highlights": [
+        "Scripting (Python, Perl)",
+        "Chiffrement et Certificats",
+        "VPN"
+      ],
+      "keywords": [
+        "Python",
+        "TLS",
+        "Nginx",
+        "Docker"
+      ]
+    },
+    {
       "name": "BoondManager",
       "location": "Télétravail",
       "description": "",
@@ -70,27 +86,6 @@
         "MariaDB",
         "GlusterFS",
         "Galera Cluster"
-      ]
-    },
-    {
-      "name": "IUT de Sénart",
-      "location": "Lieusaint",
-      "description": "",
-      "position": "Enseignant vacataire en Licence Pro",
-      "url": "https://www.iutsf.u-pec.fr/",
-      "startDate": "2012.10",
-      "endDate": "Aujourd'hui",
-      "summary": "",
-      "highlights": [
-        "Scripting (Python, Perl)",
-        "Chiffrement et Certificats",
-        "VPN"
-      ],
-      "keywords": [
-        "Python",
-        "TLS",
-        "Nginx",
-        "Docker"
       ]
     },
     {
@@ -267,7 +262,8 @@
         "Ansible",
         "Git",
         "GitLab CI",
-        "Terraform"
+        "Terraform",
+        "Kubernetes"
       ]
     },
     {
@@ -468,14 +464,14 @@
         "Infrastructure"
       ],
       "startDate": "2020.05",
-      "url": "https://gitlab.com/nicolas-karolak/infra",
+      "url": "https://github.com/nikaro/infra",
       "roles": [],
       "entity": "",
       "type": "scripts"
     }
   ],
   "meta": {
-    "canonical": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/resume.json",
+    "canonical": "https://github.com/nikaro/resume/raw/main/schema.json",
     "version": "v1.1.0",
     "lastModified": "2021-07-04T19:46:00",
     "theme": "pillar",
@@ -484,7 +480,7 @@
     "css_variant_integrity": "sha384-Omtznw2zAwMgvTINLarnhy1Ey9cYy7stsTX/93tixvhCV341e15cRmwrI0ZTSu4A",
     "download": {
       "pdf": "/index.pdf",
-      "json": "https://gitlab.com/nicolas-karolak/resume/-/raw/main/resume.json"
+      "json": "https://github.com/nikaro/resume/raw/main/resume.json"
     }
   }
 }
