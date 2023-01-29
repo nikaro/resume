@@ -278,6 +278,7 @@
       "keywords": [
         "Ansible",
         "Git",
+        "GitHub Actions",
         "GitLab CI",
         "Terraform",
         "Kubernetes"
@@ -307,6 +308,7 @@
       "keywords": [
         "Scaleway",
         "OVH",
+        "GCP",
         "AWS"
       ]
     },
@@ -389,7 +391,6 @@
       "name": "Technologies",
       "keywords": [
         "Auto-hébergement",
-        "Domotique",
         "Programmation"
       ]
     }
