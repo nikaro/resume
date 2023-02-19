@@ -7,49 +7,57 @@ all: help
 ## setup: Install required tools
 setup:
 	@echo "Installing..."
-	@command -v resumepy || pip install resume-pycli
+	poetry install --no-interaction
 
 .PHONY: validate
 ## validate: Validate JSON
 validate:
 	@echo "Checking..."
-	@resume validate --schema schema.json
+	poetry run resume validate
 
 .PHONY: pdf
 ## pdf: Generate PDF
 pdf: validate
 	@echo "Rendering PDF..."
-	@resume export --pdf --theme stackoverflow
+	poetry run resume export --no-html --theme stackoverflow
 
 .PHONY: html
 ## html: Generate HTML
 html: validate
 	@echo "Rendering HTML..."
-	@resume export --html
-
-.PHONY: build
-## build: Generate site archive
-build: pdf html
-	@echo "Building..."
-	@mkdir -p public/
-	@[ -d themes/$(shell jq .meta.theme resume.json)/assets ] && cp -r themes/$(shell jq .meta.theme resume.json)/assets public/
+	poetry run resume export --no-pdf
 
 .PHONY: watch
 ## watch: Live-update resume on changes
 watch:
 	@echo "Watching..."
-	@rg --files . | entr resume export --html
+	rg --files . | entr poetry run resume export --html
 
 .PHONY: serve
 ## serve: Serve content
 serve:
 	@echo "Serving..."
-	@resume serve --bind 0.0.0.0
+	poetry run resume serve --host 0.0.0.0
+
+.PHONY: build
+## build: Build Python package
+build: setup pdf html
+	@echo "Building package..."
+	poetry build --no-interaction
 
 .PHONY: clean
 ## clean: Remove generated files
 clean:
-	@[ ! -d ./public ] || rm -rf ./public
+	@echo "Cleaning..."
+	rm -rf ./dist
+	rm -rf ./public
+	poetry env remove --all --no-interaction
+
+.PHONY: publish
+## publish: Publish on PyPI
+publish:
+	@echo "Publishing..."
+	poetry publish
 
 .PHONY: help
 ## help: Prints this help message

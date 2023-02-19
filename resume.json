@@ -1,5 +1,5 @@
 {
-  "$schema": "https://github.com/nikaro/resume/raw/main/schema.json",
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Nicolas Karolak",
     "label": "Ingénieur Systèmes Linux",
@@ -27,8 +27,7 @@
       "description": "",
       "position": "Ingénieur DevOps et Sécurité",
       "url": "https://www.silvr.co",
-      "startDate": "2022.10",
-      "endDate": "Aujourd'hui",
+      "startDate": "2022-10",
       "summary": "",
       "highlights": [],
       "keywords": [
@@ -43,8 +42,7 @@
       "description": "",
       "position": "Enseignant vacataire en Licence Pro",
       "url": "https://www.iutsf.u-pec.fr/",
-      "startDate": "2012.10",
-      "endDate": "Aujourd'hui",
+      "startDate": "2012-10",
       "summary": "",
       "highlights": [
         "Scripting (Python, Perl)",
@@ -64,8 +62,8 @@
       "description": "Créateur de solutions logicielles libres dédiées au secteur public.",
       "position": "Ingénieur Systèmes Linux",
       "url": "http://www.atexo.com/",
-      "startDate": "2021.06",
-      "endDate": "2021.10",
+      "startDate": "2021-06",
+      "endDate": "2021-10",
       "summary": "",
       "highlights": [
         "Automatisation de l'infrastructure",
@@ -87,8 +85,8 @@
       "description": "",
       "position": "Ingénieur Systèmes Linux",
       "url": "https://www.boondmanager.com/",
-      "startDate": "2020.10",
-      "endDate": "2021.06",
+      "startDate": "2020-10",
+      "endDate": "2021-06",
       "summary": "",
       "highlights": [
         "Mise en place GlusterFS",
@@ -111,8 +109,8 @@
       "description": "",
       "position": "Ingénieur Systèmes Linux",
       "url": "https://www.univ-gustave-eiffel.fr/",
-      "startDate": "2020.05",
-      "endDate": "2020.10",
+      "startDate": "2020-05",
+      "endDate": "2020-10",
       "summary": "",
       "highlights": [
         "Déploiement de service (WireGuard, pfSense, etc.)",
@@ -130,8 +128,8 @@
       "description": "",
       "position": "Ingénieur Systèmes Linux",
       "url": "https://www.ubicast.eu/",
-      "startDate": "2017.09",
-      "endDate": "2020.04",
+      "startDate": "2017-09",
+      "endDate": "2020-04",
       "summary": "",
       "highlights": [
         "Déploiements avec Terraform, Packer et Ansible",
@@ -155,8 +153,8 @@
       "description": "",
       "position": "Responsable Informatique",
       "url": "https://www.lyceesaintnicolas.com/",
-      "startDate": "2016.09",
-      "endDate": "2017.07",
+      "startDate": "2016-09",
+      "endDate": "2017-07",
       "summary": "",
       "highlights": [
         "Développement d'un gestionnaire de comptes utilisateurs (Django)",
@@ -175,8 +173,8 @@
       "description": "",
       "position": "Administrateur Systèmes et Réseaux",
       "url": "https://www.iutsf.u-pec.fr/",
-      "startDate": "2015.09",
-      "endDate": "2016.09",
+      "startDate": "2015-09",
+      "endDate": "2016-09",
       "summary": "",
       "highlights": [
         "Administration système (Debian/Ubuntu)",
@@ -195,8 +193,8 @@
       "description": "",
       "position": "Administrateur Systèmes et Réseaux",
       "url": "https://www.lyceesaintnicolas.com/",
-      "startDate": "2011.07",
-      "endDate": "2014.12",
+      "startDate": "2011-07",
+      "endDate": "2014-12",
       "summary": "",
       "highlights": [
         "Administration serveurs GNU/Linux et Windows",
@@ -214,8 +212,8 @@
       "description": "",
       "position": "Technicien Support",
       "url": "https://www.chateaudeau.com/",
-      "startDate": "2009.07",
-      "endDate": "2011.07",
+      "startDate": "2009-07",
+      "endDate": "2011-07",
       "summary": "",
       "highlights": [
         "Gestion, maintenance, installation (Serveurs & PC)",
@@ -234,8 +232,8 @@
       "url": "https://www.iutsf.u-pec.fr",
       "area": "Administration des Systèmes et Réseaux",
       "studyType": "Licence Pro",
-      "startDate": "2011.10",
-      "endDate": "2012.06",
+      "startDate": "2011-10",
+      "endDate": "2012-06",
       "score": "16",
       "courses": []
     },
@@ -244,8 +242,8 @@
       "url": "https://groupemedicis.com/",
       "area": "Administration des Réseaux Locaux d'Entreprise",
       "studyType": "BTS",
-      "startDate": "2009.09",
-      "endDate": "2011.05",
+      "startDate": "2009-09",
+      "endDate": "2011-05",
       "score": "12",
       "courses": []
     },
@@ -254,8 +252,8 @@
       "url": "https://lyceemetierscombs.net/",
       "area": "Micro-informatique et Réseaux : Installation et Maintenance",
       "studyType": "Bac Pro",
-      "startDate": "2007.09",
-      "endDate": "2009.06",
+      "startDate": "2007-09",
+      "endDate": "2009-06",
       "score": "15",
       "courses": []
     }
@@ -406,7 +404,7 @@
         "Git",
         "Community"
       ],
-      "startDate": "2013.09",
+      "startDate": "2013-09",
       "url": "https://github.com/nikaro",
       "roles": [],
       "entity": "",
@@ -422,7 +420,7 @@
         "Logging",
         "VPN"
       ],
-      "startDate": "2020.06",
+      "startDate": "2020-06",
       "url": "https://github.com/nikaro/wirelogd",
       "roles": [],
       "entity": "",
@@ -436,7 +434,7 @@
         "Go",
         "Supervision"
       ],
-      "startDate": "2020.06",
+      "startDate": "2020-06",
       "url": "https://github.com/nikaro/zabbixmon",
       "roles": [],
       "entity": "",
@@ -451,7 +449,7 @@
         "Docker",
         "Go"
       ],
-      "startDate": "2019.12",
+      "startDate": "2019-12",
       "url": "https://github.com/nikaro/devc",
       "roles": [],
       "entity": "",
@@ -466,7 +464,7 @@
         "JSONResume",
         "Python"
       ],
-      "startDate": "2021.05",
+      "startDate": "2021-05",
       "url": "https://github.com/nikaro/resume-pycli",
       "roles": [],
       "entity": "",
@@ -481,7 +479,7 @@
         "Terraform",
         "Infrastructure"
       ],
-      "startDate": "2020.05",
+      "startDate": "2020-05",
       "url": "https://github.com/nikaro/infra",
       "roles": [],
       "entity": "",
@@ -489,9 +487,6 @@
     }
   ],
   "meta": {
-    "canonical": "https://github.com/nikaro/resume/raw/main/schema.json",
-    "version": "v1.1.0",
-    "lastModified": "2021-07-04T19:46:00",
     "theme": "pillar",
     "lang": "fr",
     "css_variant": "pillar-2",

@@ -3,4 +3,5 @@
 .vim/
 
 # outputs
+dist/
 site.tar.gz
