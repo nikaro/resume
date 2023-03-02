@@ -1,4 +1,4 @@
-name: GitHub Pages
+name: Cloudflare Pages
 
 on:
   push:
@@ -9,31 +9,31 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  deployments: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Build Resume
-        run: make export
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'public/'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
 
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.ref_name != 'main'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: stable
+      - run: make setup
+      - run: make validate
+      - run: make build
+      - uses: cloudflare/pages-action@0fc25c3c282fb26e9a53abfadf6d2898adcac3de
+        id: page
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: cv-karolak-fr
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -1,63 +1,56 @@
 .PHONY: all
-all: help
+all: build
 
-# openssl dgst -sha384 -binary FILENAME.js | openssl base64 -A
+# curl -sL <URL> | openssl dgst -sha384 -binary | openssl base64 -A
 
 .PHONY: setup
 ## setup: Install required tools
 setup:
 	@echo "Installing..."
-	poetry install --no-interaction
-
+	command -v goresume || GOBIN=$(shell go env GOROOT)/bin go install github.com/nikaro/goresume@latest
+	
 .PHONY: validate
 ## validate: Validate JSON
 validate:
 	@echo "Checking..."
-	poetry run resume validate
+	goresume validate --resume resume.yaml --schema schema.json
 
 .PHONY: pdf
 ## pdf: Generate PDF
-pdf: validate
+pdf:
 	@echo "Rendering PDF..."
-	poetry run resume export --no-html --theme stackoverflow
+	goresume export --resume resume.yaml --html=false
 
 .PHONY: html
 ## html: Generate HTML
-html: validate
+html:
 	@echo "Rendering HTML..."
-	poetry run resume export --no-pdf
+	goresume export --resume resume.yaml --pdf=false
+
+.PHONY: build
+## build: Generate HTML and PDF
+build:
+	@echo "Building..."
+	mkdir -p public
+	goresume export --resume resume.yaml --log-level info
+
+.PHONY: serve
+## serve: Start a local HTTP server
+serve:
+	@echo "Serving..."
+	python -m http.server --directory public --bind localhost
 
 .PHONY: watch
 ## watch: Live-update resume on changes
 watch:
 	@echo "Watching..."
-	rg --files . | entr poetry run resume export --html
-
-.PHONY: serve
-## serve: Serve content
-serve:
-	@echo "Serving..."
-	poetry run resume serve --host 0.0.0.0
-
-.PHONY: build
-## build: Build Python package
-build: setup pdf html
-	@echo "Building package..."
-	poetry build --no-interaction
+	rg --files . | entr resume export --resume resume.yaml
 
 .PHONY: clean
 ## clean: Remove generated files
 clean:
 	@echo "Cleaning..."
-	rm -rf ./dist
 	rm -rf ./public
-	poetry env remove --all --no-interaction
-
-.PHONY: publish
-## publish: Publish on PyPI
-publish:
-	@echo "Publishing..."
-	poetry publish
 
 .PHONY: help
 ## help: Prints this help message
