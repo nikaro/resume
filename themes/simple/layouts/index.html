@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+{{- $data := index .Site.Data .Site.Language.Lang }}
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="{{ $data.resume.basics.name }}">
+	<meta name="description" content="{{ $data.resume.basics.name }} - {{ $data.resume.basics.label }}">
+	<title>{{ $data.resume.basics.name }} – {{ $data.resume.basics.label }}</title>
+	<link rel="icon" href="data:,">
+	{{- $style := resources.GetRemote "https://cdn.simplecss.org/simple.min.css" | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+	<style>
+		aside {
+			font-size: 70%;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		{{- if not .Params.Print }}
+		<div style="text-align: right;">
+			{{- range .Site.Home.AllTranslations }}
+			<a href="{{ .Permalink }}" style="text-decoration: none;" title="{{ .Language.LanguageName }}">{{ (printf ":%s:" .Language.Params.Flag) | emojify }}</a>
+			{{- end }}
+			<a href="print" style="text-decoration: none;" title='{{ i18n "print" }}'>{{ ":printer:" | emojify }}</a>
+		</div>
+		{{- end }}
+		<h1>{{ $data.resume.basics.name }}</h1>
+		{{- if $data.resume.basics.image }}
+		<img src="{{ $data.resume.basics.image }}" alt="profile picture" width="160">
+		{{- end }}
+		<h2>{{ $data.resume.basics.label }}</h2>
+		<div>
+			{{- $location := printf "%s, %s, %s" $data.resume.basics.location.city $data.resume.basics.location.region $data.resume.basics.location.countryCode }}
+			<a href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map"><button>{{ $location }}</button></a>
+			<a href="mailto:{{ $data.resume.basics.email }}" title="Email"><button>{{ $data.resume.basics.email }}</button></a>
+			<a href="tel:{{ $data.resume.basics.phone }}" title="Phone"><button>{{ $data.resume.basics.phone }}</button></a>
+		</div>
+		<div>
+			<a href="{{ $data.resume.basics.url }}"><button>{{ i18n "website" }}</button></a>
+			{{- range $data.resume.basics.profiles }}
+			{{- if eq (.network | lower) "pdf" }}
+			<a href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF"><button>{{ .network }}</button></a>
+			{{- else }}
+			<a href="{{ .url }}" title="{{ .network }}: {{ .username }}"><button>{{ .network }}</button></a>
+			{{- end }}
+			{{- end }}
+		</div>
+	</header>
+	<main>
+		{{- if $data.resume.basics.summary }}
+		{{ $data.resume.basics.summary | markdownify }}
+		{{- end }}
+		{{- if $data.resume.work }}
+		<section>
+			<h3>{{ i18n "work" }}</h3>
+			{{- range $data.resume.work }}
+			<article>
+				<h5>{{ .position }} @ <a href="{{ .url }}" title="{{ .description }}">{{ .name }}</a> • {{ .location }}</h5>
+				<aside> {{ .startDate }} • {{ .endDate | default (i18n "today" ) }}</aside>
+				{{- if .summary }}
+				{{ .summary | markdownify }}
+				{{- end }}
+				{{- if .highlights }}
+				<h6>{{ i18n "highlights" }}</h6>
+				<p>{{ delimit .highlights " • " }}</p>
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.education }}
+		<section>
+			<h3>{{ i18n "education" }}</h3>
+			{{- range $data.resume.education }}
+			<article>
+				<h5>{{ .studyType }}, {{ .area }} @ <a href="{{ .url }}" title="{{ .institution }}">{{ .institution }}</a></h5>
+				<aside>{{ .startDate }} • {{ .endDate | default (i18n "today") }}</aside>
+				{{- if .score }}
+				<p>{{ i18n "score" }}: {{ .score }}</p>
+				{{- end }}
+				{{- if .courses }}
+				<h6>{{ i18n "courses" }}</h6>
+				<p>{{ delimit .courses " • " }}</p>
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.projects }}
+		<section>
+			<h3>{{ i18n "projects" }}</h3>
+			{{- range $data.resume.projects }}
+			<article>
+				<h5 title={{ .type }}>{{ .name }} @ <a href="{{ .url }}" title="{{ .entity }}">{{ .entity }}</a></h5>
+				<aside>{{ .startDate }} • {{ .endDate | default (i18n "today") }}</aside>
+				{{- if .roles }}
+				<p><b>{{ i18n "roles" }}</b>: {{ delimit .roles ", " }}</p>
+				{{- end }}
+				{{- if .description }}
+				{{ .description | markdownify }}
+				{{- end }}
+				{{- if .highlights }}
+				<h6>{{ i18n "highlights" }}</h6>
+				<p>{{ delimit .highlights " • " }}</p>
+				{{- end }}
+				{{- if or .keywords }}
+				<p>
+					{{- range .keywords }}
+					<mark>{{ . }}</mark>
+					{{- end }}
+				</p>
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.volunteer }}
+		<section>
+			<h3>{{ i18n "volunteer" }}</h3>
+			{{- range $data.resume.volunteer }}
+			<article>
+				<h5>{{ .position }} @ <a href="{{ .url }}" title="{{ .organization }}">{{ .organization }}</a></h5>
+				<aside>{{ .startDate }} • {{ .endDate | default (i18n "today") }}</aside>
+				{{- if .summary }}
+				{{ .summary | markdownify }}
+				{{- end }}
+				{{- if .highlights }}
+				<h6>{{ i18n "highlights" }}</h6>
+				<p>{{ delimit .highlights " • " }}</p>
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.certificates }}
+		<section>
+			<h3>{{ i18n "certificates" }}</h3>
+			{{- range $data.resume.certificates }}
+			<article>
+				<h5>{{ .name }} @ <a href="{{ .url }}" title="{{ .issuer }}">{{ .issuer }}</a></h5>
+				<p>{{ .date }}</p>
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.awards }}
+		<section>
+			<h3>{{ i18n "awards" }}</h3>
+			{{- range $data.resume.awards }}
+			<article>
+				<h5>{{ .title }} @ {{ .awarder }}</h5>
+				<aside>{{ .date }}</aside>
+				{{- if .summary }}
+				{{ .summary | markdownify }}
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.publications }}
+		<section>
+			<h3>{{ i18n "publications" }}</h3>
+			{{- range $data.resume.publications }}
+			<article>
+				<h5>{{ .name }} @ <a href="{{ .url }}" title="{{ .name }}">{{ .publisher }}</a></h5>
+				<aside>{{ .releaseDate }}</aside>
+				{{- if .summary }}
+				{{ .summary | markdownify }}
+				{{- end }}
+			</article>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.languages }}
+		<section>
+			<h3>{{ i18n "languages" }}</h3>
+			{{- range $data.resume.languages }}
+			<p><b>{{ .language }}</b>: {{ .fluency }}</p>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.skills }}
+		<section>
+			<h3>{{ i18n "skills" }}</h3>
+			{{- range $data.resume.skills }}
+			<p><b>{{ .name }}</b> (<i>{{ .level }}</i>){{ if .keywords }}: {{ delimit .keywords " • " }}{{ end }}</p>
+			{{- end }}
+		</section>
+		{{- end }}
+		{{- if $data.resume.interests }}
+		<section>
+			<h3>{{ i18n "interests" }}</h3>
+			{{- range $data.resume.interests }}
+			<p><b>{{ .name }}</b>{{ if .keywords }}: {{ delimit .keywords " • " }}{{ end }}</p>
+			{{- end }}
+		</section>
+		{{- end }}
+	</main>
+	<footer>
+		<p>{{ i18n "generated_by" }} <a href="https://gohugo.io" title="Static site generator">Hugo</a></p>
+	</footer>
+</body>
+
+{{ if .Params.Print }}
+<script>window.print();</script>
+{{ end }}
+
+</html>

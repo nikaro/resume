@@ -1,0 +1,17 @@
+---
+
+defaultContentLanguage: fr
+disableKinds:
+  - RSS
+  - section
+  - sitemap
+  - taxonomy
+  - term
+languages:
+  en:
+    flag: uk
+    languageName: English
+  fr:
+    flag: fr
+    languageName: Français
+theme: simple

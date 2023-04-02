@@ -1,0 +1,249 @@
+basics:
+  name: Nicolas Karolak
+  label: DevOps Engineer
+  image: https://avatars.githubusercontent.com/u/3918653?v=4
+  email: cv@karolak.fr
+  phone: '+33756995490'
+  url: https://blog.karolak.fr
+  summary: >-
+    Passionate about computers. Linux and automation oriented. Free and open
+    source software lover. Occasional contributor. Remote worker. I need my work
+    to be meaningful and socially useful.
+  location:
+    city: Melun
+    countryCode: FR
+    region: Île-de-France
+  profiles:
+    - network: GitHub
+      username: nikaro
+      url: https://github.com/nikaro
+    - network: LinkedIn
+      username: nicolas-karolak
+      url: https://linkedin.com/in/nicolas-karolak
+
+work:
+  - name: Silvr
+    location: Remote
+    description: >-
+      On-demand financing solutions for SaaS and eCommerce
+    position: DevOps and Security Engineer
+    url: https://www.silvr.co
+    startDate: 2022-10
+    summary: >-
+      As a member of the Infrastructure team, I participate in the maintenance
+      and evolution of the different services, and assist the developers in the
+      deployment of their code to production.
+    highlights:
+      - CI/CD pipeline management via GitHub Actions
+      - Kubernetes resources deployment via Helm
+      - GCP infrastructure management via Terraform
+  - name: IUT de Sénart
+    location: Lieusaint
+    description: Public University
+    position: Bachelor's Degree Teacher
+    url: https://www.iutsf.u-pec.fr/
+    startDate: 2012-10
+    summary: >-
+      Some time after having passed my Bachelor's Degree, I was invited to help
+      with the supervision of the practical and tutorial at first, to later
+      begin to intervene in certain course modules for which I could develop a
+      professional expertise.
+    highlights:
+      - Cryptography basics training
+      - Python scripting training
+  - name: Atexo
+    location: Remote / Paris
+    description: Créateur de solutions logicielles libres dédiées au secteur public
+    position: Linux Systems Engineer
+    url: http://www.atexo.com
+    startDate: 2021-06
+    endDate: 2021-10
+    summary: >-
+      Within the Infrastructure team, I participated in the deployment,
+      maintenance and supervision of the platforms for the customers, and in the
+      evolution of the Ansible scripts allowing the automation of these tasks.
+    highlights:
+      - Deployment management via Ansible
+      - Evolution of Ansible scripts
+      - Migration of storage infrastructure to ZFS
+  - name: BoondManager
+    location: Remote
+    description: SaaS ERP for IT services companies
+    position: Linux Systems Engineer
+    url: https://www.boondmanager.com
+    startDate: 2020-10
+    endDate: 2021-06
+    summary: >-
+      As a member of the "DevOps" team, I set up proofs of concepts for the
+      necessary evolutions to the infrastructure.
+    highlights:
+      - Implementation of Ansible best practices
+      - POC for a Galera cluster
+      - POC for a GlusterFS cluster
+  - name: UGE
+    location: Remote / Champs-sur-Marne
+    description: Public University
+    position: Linux Systems Engineer
+    url: https://www.univ-gustave-eiffel.fr
+    startDate: 2020-05
+    endDate: 2020-10
+    summary: >-
+      I joined the IT department to help with user support and fleet
+      administration.
+    highlights:
+      - WireGuard VPN deployment
+      - Writing a logging daemon for WireGuard
+  - name: UbiCast
+    location: Remote / Ivry-sur-Seine
+    description: Video learning CMS
+    position: Linux Systems Engineer
+    url: https://www.ubicast.eu
+    startDate: 2017-09
+    endDate: 2020-04
+    summary: >-
+      I was recruited to relieve the lead dev and the CTO of system
+      administration tasks. This is how I was able to set up the 
+      deployment automation tools and start a DevOps approach.
+    highlights:
+      - Bash/Python scripts migration to Ansible
+      - PostgreSQL high availability
+      - Python/Django developments
+      - Docker and GitLab CI implementation
+  - name: Lycée Saint-Nicolas
+    location: Paris
+    description: Private High-School
+    position: IT Manager
+    url: https://www.lyceesaintnicolas.com
+    startDate: 2016-09
+    endDate: 2017-07
+    summary: >-
+      Following the departure of the manager with whom I had worked during my
+      previous position at the School, he contacted me again to offer me the
+      opportunity to take over.
+    highlights:
+      - Management of servers and clients
+      - Implementation of Ansible
+      - Writing a Django backend for user management
+  - name: IUT de Sénart
+    location: Lieusaint
+    description: Public University
+    position: Systems and Networks Administrator
+    url: https://www.iutsf-u-pec.fr
+    startDate: 2015-09
+    endDate: 2016-09
+    summary: >-
+      I joined the IT department to help with user support and fleet
+      administration.
+    highlights:
+      - Management of servers and clients
+      - Implementation of Centreon for supervision
+  - name: Lycée Saint-Nicolas
+    location: Paris
+    description: Private High-School
+    position: Systems and Networks Administrator
+    url: https://www.lyceesaintnicolas.com
+    startDate: 2011-07
+    endDate: 2014-12
+    summary: >-
+      I was recruited to help the IT manager, who being a teacher could only
+      be available part-time. I was in charge of level 1 to 3 support, and the
+      design and maintenance of the infrastructure.
+    highlights:
+      - Management of servers and clients
+      - Virtualization of servers with Proxmox
+      - Implementation of inter-site VPN
+  - name: Chateaud'eau
+    location: La Courneuve
+    description: Water fountain dispenser
+    position: IT Support Technician
+    url: https://www.chateaudeau.com
+    startDate: 2009-07
+    endDate: 2011-07
+    summary: >-
+      As a member of the support team in the French subsidiary, I was in charge
+      of solving employees' problems on the different applications, and also of
+      liaising with the N+3 support.
+    highlights:
+      - Management of servers and clients
+      - ERP migration management
+      - Implementation of infrastructure projects
+
+education:
+  - institution: IUT de Sénart
+    url: https://www.iutsf.u-pec.fr
+    area: Systems and Network Administration
+    studyType: Bachelor's Degree
+    startDate: 2011-10
+    endDate: 2012-06
+    score: '16'
+  - institution: Medicis
+    url: https://groupemedicis.com
+    area: Administration of Local Area Networks
+    studyType: HND
+    startDate: 2009-09
+    endDate: 2011-05
+    score: '12'
+  - institution: Lycée Jacques Prévert
+    url: https://lyceemetierscombs.net
+    area: Microcomputing and Networking
+    studyType: Vocational Baccalauréat
+    startDate: 2007-09
+    endDate: 2009-06
+    score: '15'
+
+skills:
+  - name: Operating System
+    level: Master
+    keywords:
+      - Linux
+  - name: Infrastructure-as-Code
+    level: Advanced
+    keywords:
+      - Ansible
+      - Docker
+      - Git
+      - Kubernetes
+      - Terraform
+  - name: Scripting
+    level: Advanced
+    keywords:
+      - Bash
+      - Go
+      - Python
+  - name: Web
+    level: Good
+    keywords:
+      - Apache2
+      - HAProxy
+      - Nginx
+  - name: Cloud
+    level: Good
+    keywords:
+      - AWS
+      - GCP
+      - OVH
+      - Scaleway
+  - name: Database
+    level: Moderate
+    keywords:
+      - MariaDB
+      - PostgreSQL
+      - Redis
+
+languages:
+  - language: English
+    fluency: Advanced (C1)
+  - language: French
+    fluency: Native language
+
+interests:
+  - name: Sports
+    keywords:
+      - Climbing
+      - Judo
+      - Hiking
+  - name: Culture
+    keywords:
+      - Astronomy
+      - Fantasy
+      - Science-fiction

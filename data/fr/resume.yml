@@ -1,0 +1,252 @@
+basics:
+  name: Nicolas Karolak
+  label: Ingénieur Systèmes Linux
+  image: https://avatars.githubusercontent.com/u/3918653?v=4
+  email: cv@karolak.fr
+  phone: '+33756995490'
+  url: https://blog.karolak.fr
+  summary: >-
+    Passionné d'informatique. Orienté Linux et automatisation. Amateur de
+    logiciels libres et open source. Contributeur occasionnel. Télétravailleur.
+    J'ai besoin que mon travail ait du sens et une utilité sociale.
+  location:
+    city: Melun
+    countryCode: FR
+    region: Île-de-France
+  profiles:
+    - network: GitHub
+      username: nikaro
+      url: https://github.com/nikaro
+    - network: LinkedIn
+      username: nicolas-karolak
+      url: https://linkedin.com/in/nicolas-karolak
+
+work:
+  - name: Silvr
+    location: Télétravail
+    description: >-
+      Solutions de financement à la demande pour les entreprises de SaaS et
+      eCommerce
+    position: Ingénieur DevOps et Sécurité
+    url: https://www.silvr.co
+    startDate: 2022-10
+    summary: >-
+      Membre de l'équipe Infrastructure, je participe au maintien et à
+      l'évolution des différents services, et à assister les développeurs dans
+      le déploiement de leur code jusqu'à la production.
+    highlights:
+      - Gestion des pipelines CI/CD via GitHub Actions
+      - Déploiement de ressources Kubernetes via Helm
+      - Gestion de l'infrastructure GCP via Terraform
+  - name: IUT de Sénart
+    location: Lieusaint
+    description: Université publique
+    position: Enseignant vacataire en Licence Pro
+    url: https://www.iutsf.u-pec.fr/
+    startDate: 2012-10
+    summary: >-
+      Quelques temps après avoir passé ma Licence Pro, j'ai été invité à
+      aider à l'encadrement des TP/TD dans un premier temps, pour plus tard
+      commencer à intervenir sur certains modules de cours pour lesquels j'ai
+      pu développer une expertise professionelle.
+    highlights:
+      - Formation aux bases de la cryptographie
+      - Formation au scripting Python
+  - name: Atexo
+    location: Télétravail / Paris
+    description: Créateur de solutions logicielles libres dédiées au secteur public
+    position: Ingénieur Systèmes Linux
+    url: http://www.atexo.com
+    startDate: 2021-06
+    endDate: 2021-10
+    summary: >-
+      Au sein de l'équipe Infrastructure, j'ai participé au déploiement, au
+      maintien et à la supervision des plateformes pour les clients, et à
+      l'évolution des scripts Ansible permettant l'automatisation des ces
+      tâches.
+    highlights:
+      - Gestion des déploiements via Ansible
+      - Évolution des scripts Ansible
+      - Migration de l'infra de stockage vers ZFS
+  - name: BoondManager
+    location: Télétravail
+    description: ERP pour les ESN en SaaS
+    position: Ingénieur Systèmes Linux
+    url: https://www.boondmanager.com
+    startDate: 2020-10
+    endDate: 2021-06
+    summary: >-
+      En tant que membre de l'équipe "DevOps", j'ai mis en place des preuves de
+      concepts pour les évolutions nécessaires à l'infrastructure.
+    highlights:
+      - Tentative de mise en place des bonnes pratiques Ansible
+      - POC pour un cluster Galera
+      - POC pour un cluster GlusterFS
+  - name: UGE
+    location: Télétravail / Champs-sur-Marne
+    description: Université publique
+    position: Ingénieur Systèmes Linux
+    url: https://www.univ-gustave-eiffel.fr
+    startDate: 2020-05
+    endDate: 2020-10
+    summary: >-
+      J'ai rejoins le Service Informatique pour aider au support des
+      utilisateurs et l'administration du parc.
+    highlights:
+      - Déploiement d'un VPN WireGuard
+      - Écriture d'un daemon de logging pour WireGuard
+  - name: UbiCast
+    location: Télétravail / Ivry-sur-Seine
+    description: Solutions de vidéo learning
+    position: Ingénieur Systèmes Linux
+    url: https://www.ubicast.eu
+    startDate: 2017-09
+    endDate: 2020-04
+    summary: >-
+      J'ai été recruté afin de décharger le lead-dev et le CTO des tâches
+      d'administration systèmes. C'est ainsi que j'ai pu mettre en place des
+      outils d'automatisation des déploiements et amorcer une démarche DevOps.
+    highlights:
+      - Migration des scripts Bash/Python vers Ansible
+      - Mise en haute-dispo de PostgreSQL
+      - Développements avec Python/Django
+      - Mise en place de Docker et GitLab CI
+  - name: Lycée Saint-Nicolas
+    location: Paris
+    description: Lycée privé
+    position: Responsable Informatique
+    url: https://www.lyceesaintnicolas.com
+    startDate: 2016-09
+    endDate: 2017-07
+    summary: >-
+      Suite au départ du responsable avec qui j'avais travaillé lors de mon
+      précédent poste au Lycée, il m'a recontacté pour me proposer de prendre
+      sa suite.
+    highlights:
+      - Gestion du parc de serveurs et clients
+      - Mise en place de Ansible
+      - Écriture d'un backend Django pour la gestion des utilisateurs
+  - name: IUT de Sénart
+    location: Lieusaint
+    description: Univeristé publique
+    position: Administrateur Systèmes et Réseaux
+    url: https://www.iutsf-u-pec.fr
+    startDate: 2015-09
+    endDate: 2016-09
+    summary: >-
+      J'ai rejoins le Service Informatique pour aider au support des
+      utilisateurs et l'administration du parc.
+    highlights:
+      - Gestion du parc de serveurs et clients
+      - Mise en place Centreon pour la supervision
+  - name: Lycée Saint-Nicolas
+    location: Paris
+    description: Lycée privé
+    position: Administrateur Systèmes et Réseaux
+    url: https://www.lyceesaintnicolas.com
+    startDate: 2011-07
+    endDate: 2014-12
+    summary: >-
+      J'ai été recruté pour venir en aide au résponsable informatique, qui
+      étant professeur ne pouvait qu'être disponible à temps partiel. J'étais
+      en charge du support de niveaux 1 à 3, et la conception et maintenance
+      de l'infrastructure.
+    highlights:
+      - Gestion du parc de serveurs et clients
+      - Virtualisation des serveurs avec Proxmox
+      - Mise en place de VPN inter-sites
+  - name: Chateaud'eau
+    location: La Courneuve
+    description: Distributeur de fontaine à eau
+    position: Technicien Support
+    url: https://www.chateaudeau.com
+    startDate: 2009-07
+    endDate: 2011-07
+    summary: >-
+      Membre de l'équipe Support au sein de la filiale française, j'étais
+      en charge résoudre les problèmes des collaborateurs sur les différents
+      applicatifs, et également de faire le lien avec le Support N+3.
+    highlights:
+      - Gestion du parc de serveurs et clients
+      - Pilotage de la migration d'ERP
+      - Implémentation de projets d'infrastructure
+
+education:
+  - institution: IUT de Sénart
+    url: https://www.iutsf.u-pec.fr
+    area: Administration des Systèmes et Réseaux
+    studyType: Licence Pro
+    startDate: 2011-10
+    endDate: 2012-06
+    score: '16'
+  - institution: Medicis
+    url: https://groupemedicis.com
+    area: Administration des Réseaux Locaux d'Entreprise
+    studyType: BTS
+    startDate: 2009-09
+    endDate: 2011-05
+    score: '12'
+  - institution: Lycée Jacques Prévert
+    url: https://lyceemetierscombs.net
+    area: Micro-informatique et Réseaux
+    studyType: Bac Pro
+    startDate: 2007-09
+    endDate: 2009-06
+    score: '15'
+
+skills:
+  - name: Système d'Exploition
+    level: Maîtrise
+    keywords:
+      - Linux
+  - name: Infrastructure-as-Code
+    level: Avancé
+    keywords:
+      - Ansible
+      - Docker
+      - Git
+      - Kubernetes
+      - Terraform
+  - name: Scripting
+    level: Avancé
+    keywords:
+      - Bash
+      - Go
+      - Python
+  - name: Web
+    level: Bon
+    keywords:
+      - Apache2
+      - HAProxy
+      - Nginx
+  - name: Cloud
+    level: Bon
+    keywords:
+      - AWS
+      - GCP
+      - OVH
+      - Scaleway
+  - name: Base de données
+    level: Moyen
+    keywords:
+      - MariaDB
+      - PostgreSQL
+      - Redis
+
+languages:
+  - language: Anglais
+    fluency: Autonome (C1)
+  - language: Français
+    fluency: Langue maternelle
+
+interests:
+  - name: Sports
+    keywords:
+      - Escalade
+      - Judo
+      - Randonnée
+  - name: Culture
+    keywords:
+      - Astronomie
+      - Fantastique
+      - Science-fiction

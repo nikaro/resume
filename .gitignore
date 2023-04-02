@@ -1,6 +1,7 @@
 # local cache and settings
 .netlify/
 .vim/
+.hugo_build.lock
 
 # outputs
 dist/
@@ -10,7 +11,7 @@ site.tar.gz
 *.pdf
 
 # include themes
-!themes/*.html
+!themes/**/*.html
 
 # cloudflare settings
 !public/_redirects

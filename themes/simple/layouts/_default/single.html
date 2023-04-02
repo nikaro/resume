@@ -1,0 +1,313 @@
+<!doctype html>
+<!--
+    Author: David Carvajal
+    Source: https://github.com/davcd/jsonresume-theme-actual
+-->
+<html lang="{{ .Site.Language.Lang }}">
+{{- $data := index .Site.Data .Site.Language.Lang }}
+
+<head>
+	<meta charset="utf-8">
+	{{- $style := resources.Get "single.css" | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+	<title>{{ $data.resume.basics.name }} – {{ $data.resume.basics.label }}</title>
+</head>
+
+<body>
+	<div class="content">
+		<div class="basics">
+			<div class="table padding-container-2">
+				<div class="main">
+					<span class="name">{{ $data.resume.basics.name }}</span>
+					<span class="label">{{ $data.resume.basics.label }}</span>
+				</div>
+				<div class="side">
+					<ul class="contact">
+						<li>{{ $data.resume.basics.phone }}</li>
+						<li>{{ $data.resume.basics.email }}</li>
+						<li class="margin-text-5">{{ $data.resume.basics.location.city }}, {{ $data.resume.basics.location.region }}, {{ $data.resume.basics.location.countrycode }}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="summary markdown padding-container-2">
+				{{ $data.resume.basics.summary | markdownify }}
+			</div>
+		</div>
+		<div class="table">
+			<div class="main">
+				{{- if $data.resume.work }}
+				<div class="work margin-container-3">
+					<p class="section-title no-alone-2">{{ i18n "work" }}</p>
+					<div class="container">
+						{{- range $data.resume.work }}
+						<div class="article margin-container-3">
+							<div class="header no-alone-1">
+								<div class="table">
+									<div class="left">
+										<span class="title">{{ .position }}</span>
+										<span class="subtitle margin-text-1">
+											<a href="{{ .url }}">{{ .name }}</a> · {{ .location }}
+										</span>
+									</div>
+									<div class="right">
+										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+									</div>
+								</div>
+							</div>
+							{{- if .summary }}
+							<div class="summary markdown margin-text-4">
+								{{ .summary | markdownify }}
+							</div>
+							{{- end }}
+							{{- if .highlights }}
+							<ul class="highlights margin-text-4 no-break">
+								{{- range .highlights }}
+								<li>{{ . }}</li>
+								{{- end }}
+							</ul>
+							{{- end }}
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.projects }}
+				<div class="projects margin-container-3">
+					<p class="section-title no-alone-2">{{ i18n "projects" }}</p>
+					<div class="container">
+						{{- range $data.resume.projects }}
+						<div class="article margin-container-3">
+							<div class="header no-alone-1">
+								<div class="table">
+									<div class="left">
+										<span class="title">{{ delimit .roles ", " }}</span>
+										<span class="subtitle margin-text-1">
+											<a href="{{ .url }}">{{ .name }}</a>
+										</span>
+									</div>
+									<div class="right">
+										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+									</div>
+								</div>
+							</div>
+							<div class="summary markdown margin-text-4">
+								{{ .description | markdownify }}
+							</div>
+							{{- if .highlights }}
+							<ul class="highlights margin-text-4 no-break">
+								{{- range .highlights }}
+								<li>{{ . }}</li>
+								{{- end }}
+							</ul>
+							{{- end }}
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.publications }}
+				<div class="publications margin-container-3">
+					<p class="section-title no-alone-2">{{ i18n "publications" }}</p>
+					<div class="container">
+						{{- range $data.resume.publications }}
+						<div class="article margin-container-3">
+							<div class="header no-alone-1">
+								<div class="table">
+									<div class="left">
+										<span class="title">
+											<a href="{{ .url }}">{{ .name }}</a>
+										</span>
+										<span class="subtitle margin-text-1">{{ .publisher }}</span>
+									</div>
+									<div class="right">
+										<span class="date">{{ .releaseDate }}</span>
+									</div>
+								</div>
+							</div>
+							<div class="summary markdown margin-text-4">
+								{{ .summary | markdownify }}
+							</div>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.volunteer }}
+				<div class="volunteer margin-container-3">
+					<p class="section-title no-alone-2">{{ i18n "volunteer" }}</p>
+					<div class="container">
+						{{- range $data.resume.volunteer }}
+						<div class="article margin-container-3">
+							<div class="header no-alone-1">
+								<div class="table">
+									<div class="left">
+										<span class="title">{{ .position }}</span>
+										<span class="subtitle margin-text-1">
+											<a href="{{ .url }}">{{ .organization }}</a>
+										</span>
+									</div>
+									<div class="right">
+										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+									</div>
+								</div>
+							</div>
+							<div class="summary markdown margin-text-4">
+								{{ .summary | markdownify }}
+							</div>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+			</div>
+			<div class="side">
+				{{- if $data.resume.skills }}
+				<div class="skills margin-container-3">
+					<p class="section-title no-alone-1">{{ i18n "skills" }}</p>
+					<div class="container">
+						{{- range $data.resume.skills }}
+						<div class="article no-break">
+							<span>{{ .name }}</span>
+							{{- if .keywords }}
+							<ul class="margin-text-2">
+								{{- range .keywords }}
+								<li>{{ . }}</li>
+								{{- end }}
+							</ul>
+							{{- end }}
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.education }}
+				<div class="education margin-container-3">
+					<p class="section-title no-alone-1">{{ i18n "education" }}</p>
+					<div class="container">
+						{{- range $data.resume.education }}
+						<div class="article margin-container-2 no-break">
+							<div class="title markdown">
+								{{ .studytype | markdownify }}, {{ .area | markdownify }}
+							</div>
+							<span class="institution margin-text-2">
+								<a href="{{ .url }}">{{ .institution }}</a>
+							</span>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.certificates }}
+				<div class="certificates margin-container-3">
+					<p class="section-title no-alone-1">{{ i18n "certificates" }}</p>
+					<div class="container">
+						{{- range $data.resume.certificates }}
+						<div class="article margin-container-2 no-break">
+							<div class="name markdown">
+								<a href="{{ .url }}">{{ .name }}</a>
+							</div>
+							<span class="issuer margin-text-2">
+								<a href="{{ .url }}">{{ .issue }}</a>
+							</span>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.awards }}
+				<div class="awards margin-container-3">
+					<p class="section-title no-alone-1">{{ i18n "awards" }}</p>
+					<div class="container">
+						{{- range $data.resume.awards }}
+						<div class="article margin-container-2 no-break">
+							<div class="header">
+								<span class="title">{{ .title }}</span>
+								<span class="awarder margin-text-2">{{ .awarder }}</span>
+							</div>
+							<div class="summary markdown margin-text-3">
+								{{ .summary | markdownify }}
+							</div>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.references }}
+				<div class="references margin-container-3">
+					<p class="section-title no-alone-2">{{ i18n "references" }}</p>
+					<div class="container">
+						{{- range $data.resume.references }}
+						<div class="article margin-container-2 no-break">
+							<span class="name">{{ .name }}</span>
+							<q class="margin-text-2">{{ .reference }}</q>
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.languages }}
+				<div class="languages margin-container-3 no-break">
+					<p class="section-title no-alone-1">{{ i18n "languages" }}</p>
+					<div class="container">
+						<ul>
+							{{- range $data.resume.languages }}
+							<li class="article margin-text-2">{{ .language }} · {{ .fluency }}</li>
+							{{- end }}
+						</ul>
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.interests }}
+				<div class="interests margin-container-3">
+					<p class="section-title no-alone-1">{{ i18n "interests" }}</p>
+					<div class="container">
+						{{- range $data.resume.interests }}
+						<div class="article no-break">
+							<span>{{ .name }}</span>
+							{{- if .keywords }}
+							<ul class="margin-text-2">
+								{{- range .keywords }}
+								<li>{{ . }}</li>
+								{{- end }}
+							</ul>
+							{{- end }}
+						</div>
+						{{- end }}
+					</div>
+				</div>
+				{{- end }}
+				{{- if $data.resume.basics.profiles }}
+				<div class="links margin-container-3 no-break">
+					<p class="section-title no-alone-1">{{ i18n "profiles" }}</p>
+					<div class="container">
+						<ul>
+							{{- if $data.resume.basics.url }}
+							<li class="article">
+								<a href="{{  $data.resume.basics.url }}">{{ $data.resume.basics.url | strings.TrimPrefix "https://" }}</a>
+							</li>
+							{{- end }}
+							{{- range $data.resume.basics.profiles }}
+							{{- if eq (.network | lower) "pdf" }}
+							<li class="article margin-text-4">
+								<a href="{{ .url }}" download="{{ .username }}.pdf">{{ .url | strings.TrimPrefix "https://" }}</a>
+							</li>
+							{{- else }}
+							<li class="article margin-text-4">
+								<a href="{{ .url }}">{{ .url | strings.TrimPrefix "https://" }}</a>
+							</li>
+							{{- end }}
+							{{- end }}
+						</ul>
+					</div>
+				</div>
+				{{- end }}
+			</div>
+		</div>
+	</div>
+</body>
+
+{{ if .Params.Print }}
+<script>window.print();</script>
+{{ end }}
+
+</html>
