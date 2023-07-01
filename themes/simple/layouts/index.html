@@ -24,7 +24,7 @@
 		{{- if not .Params.Print }}
 		<div style="text-align: right;">
 			{{- range .Site.Home.AllTranslations }}
-			<a href="{{ .Permalink }}" style="text-decoration: none;" title="{{ .Language.LanguageName }}">{{ (printf ":%s:" .Language.Params.Flag) | emojify }}</a>
+			<a href="{{ .Permalink }}" style="text-decoration: none;" title="{{ .Language.LanguageName }}">{{ .Language.Params.Flag }}</a>
 			{{- end }}
 			<a href="print" style="text-decoration: none;" title='{{ i18n "print" }}'>{{ ":printer:" | emojify }}</a>
 		</div>
