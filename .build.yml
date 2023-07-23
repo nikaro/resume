@@ -1,0 +1,20 @@
+---
+
+image: archlinux
+
+packages:
+  - hugo
+  - hut
+
+oauth: pages.sr.ht/PAGES:RW
+
+environment:
+  site: cv.karolak.fr
+
+tasks:
+  - build: >
+      cd resume/ ;
+      hugo --gc --minify ;
+  - publish: >
+      tar -C resume/public/ -cvz . > site.tar.gz ;
+      hut pages publish -d $site site.tar.gz ;
