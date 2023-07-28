@@ -9,9 +9,11 @@ disableKinds:
   - term
 languages:
   en:
-    flag: 🇬🇧
-    languageName: English
+    params:
+      flag: 🇬🇧
+      languageName: English
   fr:
-    flag: 🇫🇷
-    languageName: Français
+    params:
+      flag: 🇫🇷
+      languageName: Français
 theme: simple
