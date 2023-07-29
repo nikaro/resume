@@ -38,7 +38,9 @@
 			{{- $location := printf "%s, %s, %s" $data.resume.basics.location.city $data.resume.basics.location.region $data.resume.basics.location.countryCode }}
 			<a href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map"><button>{{ $location }}</button></a>
 			<a href="mailto:{{ $data.resume.basics.email }}" title="Email"><button>{{ $data.resume.basics.email }}</button></a>
+			{{- if $data.resume.bacics.phone }}
 			<a href="tel:{{ $data.resume.basics.phone }}" title="Phone"><button>{{ $data.resume.basics.phone }}</button></a>
+			{{- end }}
 		</div>
 		<div>
 			<a href="{{ $data.resume.basics.url }}"><button>{{ i18n "website" }}</button></a>

@@ -2,8 +2,7 @@ basics:
   name: Nicolas Karolak
   label: DevOps Engineer
   image: /photo.jpeg
-  email: cv@karolak.fr
-  phone: '+33756995490'
+  email: nicolas@karolak.fr
   url: https://blog.karolak.fr
   summary: >-
     Passionate about computers. Linux and automation oriented. Free and open
@@ -213,12 +212,6 @@ skills:
       - Bash
       - Go
       - Python
-  - name: Web
-    level: Good
-    keywords:
-      - Apache2
-      - HAProxy
-      - Nginx
   - name: Cloud
     level: Good
     keywords:
@@ -226,6 +219,12 @@ skills:
       - GCP
       - OVH
       - Scaleway
+  - name: Web
+    level: Good
+    keywords:
+      - Apache2
+      - HAProxy
+      - Nginx
   - name: Database
     level: Moderate
     keywords:
