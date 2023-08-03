@@ -8,8 +8,8 @@
 
 <head>
 	<meta charset="utf-8">
-	{{- $style := resources.Get "single.css" | resources.Minify | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+	{{- $css := resources.Get "single.css" | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 	<title>{{ $data.resume.basics.name }} – {{ $data.resume.basics.label }}</title>
 </head>
 
@@ -25,7 +25,9 @@
 					<ul class="contact">
 						<li>{{ $data.resume.basics.phone }}</li>
 						<li>{{ $data.resume.basics.email }}</li>
-						<li class="margin-text-5">{{ $data.resume.basics.location.city }}, {{ $data.resume.basics.location.region }}, {{ $data.resume.basics.location.countrycode }}</li>
+						{{- with $data.resume.basics.location }}
+						<li class="margin-text-5">{{ .city }}, {{ .region }}, {{ .countryCode }}</li>
+						{{- end }}
 					</ul>
 				</div>
 			</div>
@@ -50,7 +52,9 @@
 										</span>
 									</div>
 									<div class="right">
-										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+										<span class="date">
+											{{ .startDate }} – {{ .endDate | default (i18n "today") }}
+										</span>
 									</div>
 								</div>
 							</div>
@@ -86,7 +90,9 @@
 										</span>
 									</div>
 									<div class="right">
-										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+										<span class="date">
+											{{ .startDate }} – {{ .endDate | default (i18n "today") }}
+										</span>
 									</div>
 								</div>
 							</div>
@@ -147,7 +153,9 @@
 										</span>
 									</div>
 									<div class="right">
-										<span class="date">{{ .startDate }} – {{ .endDate | default (i18n "today") }}</span>
+										<span class="date">
+											{{ .startDate }} – {{ .endDate | default (i18n "today") }}
+										</span>
 									</div>
 								</div>
 							</div>
@@ -187,7 +195,7 @@
 						{{- range $data.resume.education }}
 						<div class="article margin-container-2 no-break">
 							<div class="title markdown">
-								{{ .studytype | markdownify }}, {{ .area | markdownify }}
+								{{ .studyType | markdownify }}, {{ .area | markdownify }}
 							</div>
 							<span class="institution margin-text-2">
 								<a href="{{ .url }}">{{ .institution }}</a>
@@ -283,13 +291,17 @@
 						<ul>
 							{{- if $data.resume.basics.url }}
 							<li class="article">
-								<a href="{{  $data.resume.basics.url }}">{{ $data.resume.basics.url | strings.TrimPrefix "https://" }}</a>
+								<a href="{{  $data.resume.basics.url }}">
+									{{ $data.resume.basics.url | strings.TrimPrefix "https://" }}
+								</a>
 							</li>
 							{{- end }}
 							{{- range $data.resume.basics.profiles }}
 							{{- if eq (.network | lower) "pdf" }}
 							<li class="article margin-text-4">
-								<a href="{{ .url }}" download="{{ .username }}.pdf">{{ .url | strings.TrimPrefix "https://" }}</a>
+								<a href="{{ .url }}" download="{{ .username }}.pdf">
+									{{ .url | strings.TrimPrefix "https://" }}
+								</a>
 							</li>
 							{{- else }}
 							<li class="article margin-text-4">

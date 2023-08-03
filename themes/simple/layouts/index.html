@@ -9,8 +9,9 @@
 	<meta name="description" content="{{ $data.resume.basics.name }} - {{ $data.resume.basics.label }}">
 	<title>{{ $data.resume.basics.name }} – {{ $data.resume.basics.label }}</title>
 	<link rel="icon" href="data:,">
-	{{- $style := resources.GetRemote "https://cdn.simplecss.org/simple.min.css" | resources.Minify | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous">
+	{{- $css_url := "https://cdn.simplecss.org/simple.min.css"}}
+	{{- $css := resources.GetRemote $css_url | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 	<style>
 		aside {
 			font-size: 70%;
@@ -24,7 +25,9 @@
 		{{- if not .Params.Print }}
 		<div style="text-align: right;">
 			{{- range .Site.Home.AllTranslations }}
-			<a href="{{ .Permalink }}" style="text-decoration: none;" title="{{ .Language.LanguageName }}">{{ .Language.Params.Flag }}</a>
+			<a href="{{ .Permalink }}" style="text-decoration: none;" title="{{ .Language.LanguageName }}">
+				{{ .Language.Params.Flag }}
+			</a>
 			{{- end }}
 			<a href="print" style="text-decoration: none;" title='{{ i18n "print" }}'>{{ ":printer:" | emojify }}</a>
 		</div>
@@ -35,20 +38,34 @@
 		{{- end }}
 		<h2>{{ $data.resume.basics.label }}</h2>
 		<div>
-			{{- $location := printf "%s, %s, %s" $data.resume.basics.location.city $data.resume.basics.location.region $data.resume.basics.location.countryCode }}
-			<a href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map"><button>{{ $location }}</button></a>
-			<a href="mailto:{{ $data.resume.basics.email }}" title="Email"><button>{{ $data.resume.basics.email }}</button></a>
-			{{- if $data.resume.bacics.phone }}
-			<a href="tel:{{ $data.resume.basics.phone }}" title="Phone"><button>{{ $data.resume.basics.phone }}</button></a>
+			{{- with $data.resume.basics.location }}
+			{{- $location := printf "%s, %s, %s" .city .region .countryCode }}
+			<a href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map">
+				<button>{{ $location }}</button>
+			</a>
+			{{- end }}
+			<a href="mailto:{{ $data.resume.basics.email }}" title="Email">
+				<button>{{ $data.resume.basics.email }}</button>
+			</a>
+			{{- with $data.resume.bacics.phone }}
+			<a href="tel:{{ . }}" title="Phone">
+				<button>{{ . }}</button>
+			</a>
 			{{- end }}
 		</div>
 		<div>
-			<a href="{{ $data.resume.basics.url }}"><button>{{ i18n "website" }}</button></a>
+			<a href="{{ $data.resume.basics.url }}">
+				<button>{{ i18n "website" }}</button>
+			</a>
 			{{- range $data.resume.basics.profiles }}
 			{{- if eq (.network | lower) "pdf" }}
-			<a href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF"><button>{{ .network }}</button></a>
+			<a href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF">
+				<button>{{ .network }}</button>
+			</a>
 			{{- else }}
-			<a href="{{ .url }}" title="{{ .network }}: {{ .username }}"><button>{{ .network }}</button></a>
+			<a href="{{ .url }}" title="{{ .network }}: {{ .username }}">
+				<button>{{ .network }}</button>
+			</a>
 			{{- end }}
 			{{- end }}
 		</div>
@@ -62,7 +79,9 @@
 			<h3>{{ i18n "work" }}</h3>
 			{{- range $data.resume.work }}
 			<article>
-				<h5>{{ .position }} @ <a href="{{ .url }}" title="{{ .description }}">{{ .name }}</a> • {{ .location }}</h5>
+				<h5>
+					{{ .position }} @ <a href="{{ .url }}" title="{{ .description }}">{{ .name }}</a> • {{ .location }}
+				</h5>
 				<aside> {{ .startDate }} • {{ .endDate | default (i18n "today" ) }}</aside>
 				{{- if .summary }}
 				{{ .summary | markdownify }}
@@ -80,10 +99,13 @@
 			<h3>{{ i18n "education" }}</h3>
 			{{- range $data.resume.education }}
 			<article>
-				<h5>{{ .studyType }}, {{ .area }} @ <a href="{{ .url }}" title="{{ .institution }}">{{ .institution }}</a></h5>
+				<h5>
+					{{ .studyType }}, {{ .area }} @
+					<a href="{{ .url }}" title="{{ .institution }}">{{ .institution }}</a>
+				</h5>
 				<aside>{{ .startDate }} • {{ .endDate | default (i18n "today") }}</aside>
 				{{- if .score }}
-				<p>{{ i18n "score" }}: {{ .score }}</p>
+				<p>{{ i18n "score" }}: <meter min="0" max="20" value="{{ .score }}">{{ .score }}</meter></p>
 				{{- end }}
 				{{- if .courses }}
 				<h6>{{ i18n "courses" }}</h6>
@@ -190,7 +212,10 @@
 		<section>
 			<h3>{{ i18n "skills" }}</h3>
 			{{- range $data.resume.skills }}
-			<p><b>{{ .name }}</b> (<i>{{ .level }}</i>){{ if .keywords }}: {{ delimit .keywords " • " }}{{ end }}</p>
+			<p>
+				<meter min="0" max="100" low="29" high="49" value="{{ .level }}">{{ .level }}</meter>
+				<b>{{ .name }}</b>{{ if .keywords }}: {{ delimit .keywords " • " }}{{ end }}
+			</p>
 			{{- end }}
 		</section>
 		{{- end }}

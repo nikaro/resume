@@ -198,11 +198,11 @@ education:
 
 skills:
   - name: Système d'Exploition
-    level: Maîtrise
+    level: "90"
     keywords:
       - Linux
-  - name: Infrastructure-as-Code
-    level: Avancé
+  - name: Infra-as-Code
+    level: "80"
     keywords:
       - Ansible
       - Docker
@@ -210,26 +210,26 @@ skills:
       - Kubernetes
       - Terraform
   - name: Scripting
-    level: Avancé
+    level: "70"
     keywords:
       - Bash
       - Go
       - Python
+  - name: Web
+    level: "60"
+    keywords:
+      - Apache2
+      - HAProxy
+      - Nginx
   - name: Cloud
-    level: Bon
+    level: "50"
     keywords:
       - AWS
       - GCP
       - OVH
       - Scaleway
-  - name: Web
-    level: Bon
-    keywords:
-      - Apache2
-      - HAProxy
-      - Nginx
   - name: Base de données
-    level: Moyen
+    level: "40"
     keywords:
       - MariaDB
       - PostgreSQL
