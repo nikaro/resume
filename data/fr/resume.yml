@@ -46,6 +46,7 @@ work:
     position: Enseignant vacataire en Licence Pro
     url: https://www.iutsf.u-pec.fr/
     startDate: 2012-10
+    endDate: 2023-08
     summary: >-
       Quelques temps après avoir passé ma Licence Pro, j'ai été invité à
       aider à l'encadrement des TP/TD dans un premier temps, pour plus tard
@@ -81,7 +82,7 @@ work:
       En tant que membre de l'équipe "DevOps", j'ai mis en place des preuves de
       concepts pour les évolutions nécessaires à l'infrastructure.
     highlights:
-      - Tentative de mise en place des bonnes pratiques Ansible
+      - Mise en place des bonnes pratiques Ansible
       - POC pour un cluster Galera
       - POC pour un cluster GlusterFS
   - name: UGE
