@@ -1,3 +1,4 @@
 ---
+layout: print
 print: true
 ---
