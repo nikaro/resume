@@ -57,9 +57,11 @@
 			{{- end }}
 		</div>
 		<div>
-			<a href="{{ $data.resume.basics.url }}">
+			{{- with $data.resume.bacics.url}}
+			<a href="{{ . }}">
 				<button>{{ i18n "website" }}</button>
 			</a>
+			{{- end }}
 			{{- range $data.resume.basics.profiles }}
 			{{- if eq (.network | lower) "pdf" }}
 			<a href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF">
