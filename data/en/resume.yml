@@ -3,7 +3,6 @@ basics:
   label: DevOps Engineer
   image: /photo.jpeg
   email: nicolas@karolak.fr
-  url: https://blog.karolak.fr
   summary: >-
     Passionate about computers. Linux and automation oriented. Free and open
     source software lover. Occasional contributor. Remote worker. I need my work
@@ -13,9 +12,6 @@ basics:
     countryCode: FR
     region: Île-de-France
   profiles:
-    - network: SourceHut
-      username: nka
-      url: https://git.sr.ht/~nka
     - network: GitHub
       username: nikaro
       url: https://github.com/nikaro
@@ -178,21 +174,21 @@ education:
     studyType: Bachelor's Degree
     startDate: 2011-10
     endDate: 2012-06
-    score: '16'
+    score: "16"
   - institution: Medicis
     url: https://groupemedicis.com
     area: Administration of Local Area Networks
     studyType: HND
     startDate: 2009-09
     endDate: 2011-05
-    score: '12'
+    score: "12"
   - institution: Lycée Jacques Prévert
     url: https://lyceemetierscombs.net
     area: Microcomputing and Networking
     studyType: Vocational Baccalauréat
     startDate: 2007-09
     endDate: 2009-06
-    score: '15'
+    score: "15"
 
 skills:
   - name: Operating System
