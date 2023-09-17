@@ -43,33 +43,33 @@
 		<div>
 			{{- with $data.resume.basics.location }}
 			{{- $location := printf "%s, %s, %s" .city .region .countryCode }}
-			<a href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map">
-				<button>{{ $location }}</button>
+			<a class="button" href="https://maps.apple.com/?q={{ $location | urlquery }}" title="Map">
+				{{ $location }}
 			</a>
 			{{- end }}
-			<a href="mailto:{{ $data.resume.basics.email }}" title="Email">
-				<button>{{ $data.resume.basics.email }}</button>
+			<a class="button" href="mailto:{{ $data.resume.basics.email }}" title="Email">
+				{{ $data.resume.basics.email }}
 			</a>
 			{{- with $data.resume.bacics.phone }}
-			<a href="tel:{{ . }}" title="Phone">
-				<button>{{ . }}</button>
+			<a class="button" href="tel:{{ . }}" title="Phone">
+				{{ . }}
 			</a>
 			{{- end }}
 		</div>
 		<div>
 			{{- with $data.resume.bacics.url}}
-			<a href="{{ . }}">
-				<button>{{ i18n "website" }}</button>
+			<a class="button" href="{{ . }}">
+				{{ i18n "website" }}
 			</a>
 			{{- end }}
 			{{- range $data.resume.basics.profiles }}
 			{{- if eq (.network | lower) "pdf" }}
-			<a href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF">
-				<button>{{ .network }}</button>
+			<a class="button" href="{{ .url }}" download="{{ .username }}.pdf" title="Download PDF">
+				{{ .network }}
 			</a>
 			{{- else }}
-			<a href="{{ .url }}" title="{{ .network }}: {{ .username }}">
-				<button>{{ .network }}</button>
+			<a class="button" href="{{ .url }}" title="{{ .network }}: {{ .username }}">
+				{{ .network }}
 			</a>
 			{{- end }}
 			{{- end }}
