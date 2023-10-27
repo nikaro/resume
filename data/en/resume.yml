@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://github.com/jsonresume/resume-schema/raw/master/schema.json
+
 basics:
   name: Nicolas Karolak
   label: DevOps Engineer
@@ -101,7 +103,7 @@ work:
     endDate: 2020-04
     summary: >-
       I was recruited to relieve the lead dev and the CTO of system
-      administration tasks. This is how I was able to set up the 
+      administration tasks. This is how I was able to set up the
       deployment automation tools and start a DevOps approach.
     highlights:
       - Bash/Python scripts migration to Ansible
