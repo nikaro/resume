@@ -5,14 +5,9 @@
 
 # outputs
 dist/
-public/
 site.tar.gz
 *.html
 *.pdf
 
 # include themes
 !themes/**/*.html
-
-# cloudflare settings
-!public/_redirects
-!public/_headers
