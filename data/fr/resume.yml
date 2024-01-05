@@ -212,6 +212,7 @@ skills:
     level: "70"
     keywords:
       - Bash
+      - C
       - Go
       - Python
   - name: Web
