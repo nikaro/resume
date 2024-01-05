@@ -2,7 +2,7 @@
 
 basics:
   name: Nicolas Karolak
-  label: Ingénieur Systèmes Linux
+  label: Ingénieur DevOps
   image: /photo.jpeg
   email: nicolas@karolak.fr
   summary: >-
@@ -30,6 +30,7 @@ work:
     position: Ingénieur DevOps et Sécurité
     url: https://www.silvr.co
     startDate: 2022-10
+    endDate: 2024-02
     summary: >-
       Membre de l'équipe Infrastructure, je participe au maintien et à
       l'évolution des différents services, et à assister les développeurs dans
