@@ -55,6 +55,6 @@ repos:
         exclude: ^layouts/page/jsonresume\.json$
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.18.4
+    rev: v3.20.0
     hooks:
       - id: commitizen
