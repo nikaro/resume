@@ -23,7 +23,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.0
+    rev: 0.29.1
     hooks:
       - id: check-github-actions
       - id: check-github-workflows
@@ -55,6 +55,6 @@ repos:
         exclude: ^layouts/page/jsonresume\.json$
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.27.0
+    rev: v3.28.0
     hooks:
       - id: commitizen
