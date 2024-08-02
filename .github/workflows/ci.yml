@@ -1,4 +1,3 @@
----
 name: CI
 
 on:
@@ -14,25 +13,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@main
 
-      - name: Run pre-commit
-        uses: nikaro/actions/pre-commit@1633ec52940eb713889300c39803133c4bb96c23 # 1.6.9
-        with:
-          python-version: 3.x
+      - name: Install tools
+        run: |
+          echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+          /home/linuxbrew/.linuxbrew/bin/brew install \
+            actionlint \
+            check-jsonschema \
+            yamlfmt \
+            yamllint \
+
+      - name: Lint
+        run: make lint
 
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+        uses: actions/checkout@main
 
-      - name: Setup Go
-        uses: actions/setup-go@0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32 # v5.0.2
+      - name: Install tools
+        run: |
+          echo "/home/linuxbrew/.linuxbrew/bin" >> "$GITHUB_PATH"
+          /home/linuxbrew/.linuxbrew/bin/brew install \
+            hugo \
 
-      - name: Install Hugo
-        run: go install github.com/gohugoio/hugo@latest
-
-      - name: Build with Hugo
-        run: hugo --buildDrafts --buildFuture
+      - name: Build
+        run: make build-dev
