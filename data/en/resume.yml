@@ -22,6 +22,15 @@ basics:
       url: https://linkedin.com/in/nicolas-karolak
 
 work:
+  - name: Infomaniak
+    location: Geneva, Switzerland
+    description: Ethical and ecological hosting provider.
+    position: Site Reliability Engineer
+    url: https://www.infomaniak.com
+    startDate: 2024-07
+    summary: >-
+      Member of the Platform/DevOps team.
+    highlights: []
   - name: Silvr
     location: Remote
     description: >-
