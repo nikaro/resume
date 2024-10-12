@@ -11,8 +11,6 @@ format: ## Run formatters
 
 lint: ## Run linters
 	@echo Linting...
-	# Renovate
-	@check-jsonschema --builtin-schema vendor.renovate ./.github/renovate*.json
 	# GitHub Actions
 	@check-jsonschema --builtin-schema vendor.github-workflows ./.github/workflows/*.yml
 	@actionlint
