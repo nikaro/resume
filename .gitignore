@@ -1,6 +1,7 @@
 # local cache and settings
 .netlify/
 .vim/
+.tasks/
 .hugo_build.lock
 
 # outputs
