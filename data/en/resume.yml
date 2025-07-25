@@ -10,13 +10,16 @@ basics:
     source software lover. Occasional contributor. Remote worker. I need my work
     to be meaningful and socially useful.
   location:
-    city: Melun
+    city: Saint-Julien-en-Genevois
     countryCode: FR
-    region: Île-de-France
+    region: Auverge-Rhône-Alpes
   profiles:
     - network: GitHub
       username: nikaro
       url: https://github.com/nikaro
+    - network: SourceHut
+      username: ~nka
+      url: https://git.sr.ht/~nka
     - network: LinkedIn
       username: nicolas-karolak
       url: https://linkedin.com/in/nicolas-karolak
@@ -29,8 +32,13 @@ work:
     url: https://www.infomaniak.com
     startDate: 2024-07
     summary: >-
-      Member of the Platform/DevOps team.
-    highlights: []
+      As a member of the Platform/DevOps team, I build or setup tools to help
+      developers to ship high quality products. I'm also involved in monitoring
+      and maintaining the infrastructure.
+    highlights:
+      - CI/CD pipeline management via GitLab CI
+      - Automate GitOps deployments with FluxCD
+      - Kubernetes workload monitoring
   - name: Silvr
     location: Remote
     description: >-

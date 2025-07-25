@@ -10,13 +10,16 @@ basics:
     logiciels libres et open source. Contributeur occasionnel. Télétravailleur.
     J'ai besoin que mon travail ait du sens et une utilité sociale.
   location:
-    city: Melun
+    city: Saint-Julien-en-Genevois
     countryCode: FR
-    region: Île-de-France
+    region: Auverge-Rhône-Alpes
   profiles:
     - network: GitHub
       username: nikaro
       url: https://github.com/nikaro
+    - network: SourceHut
+      username: ~nka
+      url: https://git.sr.ht/~nka
     - network: LinkedIn
       username: nicolas-karolak
       url: https://linkedin.com/in/nicolas-karolak
@@ -29,8 +32,14 @@ work:
     url: https://www.infomaniak.com
     startDate: 2024-07
     summary: >-
-      Membre de l'équipe Platform/DevOps.
-    highlights: []
+      En tant que membre de l'équipe Platform/DevOps, je développe ou met en
+      place des outils pour aider les développeurs à livrer des applications
+      fiables. Je participe également à la supervision et à la maintenance de
+      l'infrastructure.
+    highlights:
+      - Gestion des pipelines CI/CD via GitLab CI
+      - Automatisation des déploiements GitOps / FluxCD
+      - Maintenance de la workload Kubernetes
   - name: Silvr
     location: Télétravail
     description: >-
