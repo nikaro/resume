@@ -6,6 +6,7 @@
 
 # outputs
 dist/
+public/
 site.tar.gz
 *.html
 *.pdf

@@ -3,30 +3,22 @@ version: '3'
 set: [errexit, nounset, pipefail]
 shopt: [globstar]
 
-includes:
-  lint:
-    taskfile: https://github.com/nikaro/meta/raw/main/taskfiles/lint.yml
-    internal: true
-  format:
-    taskfile: https://github.com/nikaro/meta/raw/main/taskfiles/format.yml
-    internal: true
-
 tasks:
   init:
     desc: Initialize repositry
     cmds:
-      - git config core.hooksPath .githooks
-      - git config commit.template .gitmessage
+      - pre-commit install
+      - pre-commit install-hooks
 
   lint:
     desc: Run linters
     cmds:
-      - task: lint:default
+      - pre-commit run --all-files --verbose
 
   format:
     desc: Run formatters
     cmds:
-      - task: format:default
+      - pre-commit run --all-files --verbose
 
   serve:
     desc: Run Hugo local development server
